@@ -1,28 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&display=swap');
 
-body{
-    background-color:rgba(238, 236, 235, 0.938);
-    color:black;
-    font-family: 'Roboto', sans-serif;
+body {
+    background-color: #070510;
+}
+th {
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 500;
+    font-size: 37px;
+    padding-top: 25px;
+    color: #DAEAF2;
+}
+img {
+    border-radius: 12px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.mod {
+    background-image: linear-gradient(to top right, #0F7499, #0B4C70);
+}
+table.music {
+    background-image: linear-gradient(to top right, #CC9C00, #BF5111);
+}
+table.custom {
+    background-image: linear-gradient(to top right, #31AA47, #1B5E28);
+}
+table.config {
+    background-image: linear-gradient(to top right, #666666, #353535);
+}
+table.misc {
+    background-image: linear-gradient(to top right, #8028BF, #57188E);
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    margin-bottom: 60px;
+}
+td {
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #DAEAF2;
+}
+td.alcim {
+    font-size: 15px;
+    padding-bottom: 8px;
+    padding-top: 0px;
+}
+td.felsorol {
+    padding-bottom: 4px;
+    padding-top: 4px;
     font-weight: 400;
 }
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    font-size: 50px;
+td.parancs {
+    font-size: 15px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-weight: 400;
 }
-
-.dark-mode{
-    background-color: #23272e;
-    color:rgba(238, 236, 235, 0.938)
-}
-.darkbutton {
-    background-color: transparent;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
+td.utolso {
+    padding-bottom: 25px;
 }
