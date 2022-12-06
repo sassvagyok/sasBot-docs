@@ -8,22 +8,21 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png">
     <title>sasOS</title>
-    <script>
-        function darkMode() {
-            var element = document.body;
-            element.classList.toggle('dark-mode')
-        }
-    </script>
-</head>
 
-<body>
-    <table class="mod">
+    <button onclick="topFunction()" id="topButton" title="Fel">Fel</button> 
+    <div class="tab">
+        <img class="logo" src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png" title="Vissza a főoldalra" alt="Vissza a főoldalra" onclick="openTab(event, 'main')" id="defaultOpen">
+        <button class="tablinks" onclick="openTab(event, 'Parancsok')">Parancsok</button>
+    </div>
+      
+    <div id="main" class="tabcontent">
+        <table class="mod">
         <th>Moderálás</th>
         <tr>
             <td class="alcim">Korszerű moderációs parancsok, korábbi eljárások mentése</td>
         </tr>
         <tr>
-            <td><img src="https://i.imgur.com/U2oddx6.gif" alt="Ban parancs működése"></td>
+            <td><img class="gif" src="https://i.imgur.com/U2oddx6.gif" alt="Ban parancs működése"></td>
         </tr>
         <tr>
             <td class="parancs elso">Ban ● Kick ● Warn ● Timeout ● Clear ● Lockdown</td>
@@ -42,7 +41,7 @@
             <td class="alcim">Zenék lejátszása könnyedén több száz oldalról</td>
         </tr>
         <tr>
-            <td><img src="https://i.imgur.com/Dd8qhTo.gif" alt="Play parancs működése"></td>
+            <td><img class="gif" src="https://i.imgur.com/Dd8qhTo.gif" alt="Play parancs működése"></td>
         </tr>
         <tr>
             <td class="felsorol elso">Zenék indítása, keresése | <p>Play ● Search</p></td>
@@ -64,7 +63,7 @@
             <td class="alcim">Egyedi funkciók hozzáadása a szerveredhez</td>
         </tr>
         <tr>
-            <td><img src="https://i.imgur.com/smM9Ftb.gif" alt="Egyedi parancsok hozzáadása"></td>
+            <td><img class="gif" src="https://i.imgur.com/smM9Ftb.gif" alt="Egyedi parancsok hozzáadása"></td>
         </tr>
         <tr>
             <td class="felsorol elso">Egyedi parancsok létrehozása | <p>Customcommand</p></td>
@@ -86,7 +85,7 @@
             <td class="alcim">Szabd testre, hogyan viselkedjen sasOS a szervereden</td>
         </tr>
         <tr>
-            <td><img src="https://i.imgur.com/vkpbGUo.gif" alt="Új prefix hozzáadása"></td>
+            <td><img class="gif" src="https://i.imgur.com/vkpbGUo.gif" alt="Új prefix hozzáadása"></td>
         </tr>
         <tr>
             <td class="felsorol elso">Prefix megváltoztatása | <p>Prefix</p></td>
@@ -108,7 +107,7 @@
             <td class="alcim">További parancsok és funkciók</td>
         </tr>
         <tr>
-            <td><img src="https://i.imgur.com/UWrnRDQ.gif" alt="Információk adott felhasználóról"></td>
+            <td><img class="gif" src="https://i.imgur.com/UWrnRDQ.gif" alt="Információk adott felhasználóról"></td>
         </tr>
         <tr>
             <td class="felsorol elso">Információk a szerverről, felhasználókról | <p>Serverinfo ● Userinfo</p></td>
@@ -129,13 +128,26 @@
             <td class="felsorol utolso">További parancsok és használatuk | <p>Help</p></td>
         </tr>
     </table>
+    </div>
 
-    <table>
+    <div id="Parancsok" class="tabcontent">
+        <h3>sasOS parancsai</h3>
+        <p>Ezek azok.</p>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+    <table class="utolso">
         <tr>
             <td class="felsorol">Rendszeres frissítések, új funkciók és fejlesztések | <p>Changelog</p></td>
         </tr>
         <tr>
             <td class="felsorol">Visszajelzés küldése | <p>Feedback ● <a href="https://discord.gg/s8XtzBasQF">Support Szerver</a></p></td>
+        </tr>
+        <tr>
+            <td><a href="https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands"> <img class="icon" src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png" alt=""</a></td>
         </tr>
     </table>
 </body>
