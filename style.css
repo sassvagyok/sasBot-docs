@@ -28,6 +28,7 @@ img.gif {
 img.logo {
     width: 4%;
     float: left;
+    margin: 7px;
 }
 
 img.icon {
@@ -127,6 +128,8 @@ button.tablinks {
     font-size: 23px;
     color: #DAEAF2;
     border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 7px;
 }
 
 .tab button:hover {
@@ -160,11 +163,29 @@ button.tablinks {
     border-radius: 10px;
     font-size: 18px;
     transition: 0.3s;
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 #topButton:hover {
     background-color: #DAEAF2;
     color: #070510;
+}
+
+a:link {
+    color: #3099DC;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3099DC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #65bbf0;
+    text-decoration: none;
 }
 
 @keyframes fadeEffect {
