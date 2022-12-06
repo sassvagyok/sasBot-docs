@@ -28,11 +28,10 @@ img.gif {
 img.logo {
     width: 4%;
     float: left;
-    margin: 7px;
 }
 
 img.icon {
-    width: 15%;
+    width: 11%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -104,6 +103,11 @@ td.elso {
 
 td.utolso {
     padding-bottom: 25px;
+}
+
+td.verzio {
+    padding-top: 0px;
+    padding-bottom: 10px;
 }
 
 p {
