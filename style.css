@@ -65,6 +65,7 @@ table {
 }
 
 table.utolso {
+    margin-top: 140px;
     margin-bottom: 0px;
 }
 
@@ -114,6 +115,10 @@ p {
     display: inline;
     font-size: 15px;
     font-weight: 400;
+}
+
+p.verzio {
+    font-weight: 300; 
 }
 
 h1 {

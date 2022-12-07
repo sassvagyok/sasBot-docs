@@ -31,3 +31,9 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+document.addEventListener("DOMContentLoaded", async function(){
+    const fetched = await fetch(`https://api.github.com/repos/sassvagyok/sasOS-docs/commits/main`)
+    const res = await fetched.json()
+    document.getElementById('message').innerHTML = res.commit.message.indexOf('\n') > -1 ? res.commit.message.substring(0, res.commit.message.indexOf('\n')) : res.commit.message
+})
