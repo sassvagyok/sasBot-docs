@@ -158,7 +158,7 @@ button.tablinks {
 .tabcontent {
     display: none;
     border-top: none;
-    animation: fadeEffect 0.7s;
+    animation: fadeEffect 0.5s;
 }
 
 #topButton {
