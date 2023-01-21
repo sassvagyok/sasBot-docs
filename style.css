@@ -135,6 +135,8 @@ h1 {
 }
 
 .tab {
+    position: sticky;
+    top: 10px;
     overflow: hidden;
 }
 

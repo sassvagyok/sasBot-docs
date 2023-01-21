@@ -11,10 +11,10 @@
 
     <button onclick="topFunction()" id="topButton" title="Fel">Fel</button> 
     <div class="tab">
-        <img class="tablinks logo" src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png" title="Vissza a főoldalra" alt="Vissza a főoldalra" onclick="openTab(event, 'main')">
+        <img class="tablinks logo" src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png" title="Vissza a főoldalra" alt="Vissza a főoldalra" onclick="document.getElementById('defaultOpen').click()">
         <button  class="tablinks" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands', '_blank')">Meghívás</a></button>
-        <button class="tablinks" onclick="openTab(event, 'Parancsok')">Parancsok</button>
-        <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'main')">Főoldal</button>
+        <button class="tablinks" onclick="openTab(event, 'Parancsok');topFunction()">Parancsok</button>
+        <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'main');topFunction()">Főoldal</button>
     </div>
       
     <div id="main" class="tabcontent">
