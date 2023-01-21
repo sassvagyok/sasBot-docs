@@ -64,9 +64,13 @@ table {
     clear: left;
 }
 
-table.utolso {
-    margin-top: 140px;
-    margin-bottom: 0px;
+hr {
+    margin-top: 100px;
+    width: 750px;
+}
+table.footer {
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 td {
