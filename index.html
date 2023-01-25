@@ -1,135 +1,158 @@
 <!DOCTYPE html>
 <html lang="hu">
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png">
-    <title>sasOS</title>
-    
-    <button onclick="topFunction()" id="topButton" title="Fel">Fel</button> 
+    <link rel="icon"
+        href="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png">
+    <title>sasOS Discord Bot</title>
+
+    <button onclick="topFunction()" id="topButton" title="Fel">Fel</button>
     <div class="tab">
-        <img class="tablinks logo" src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png" title="Vissza a főoldalra" alt="Vissza a főoldalra" onclick="document.getElementById('defaultOpen').click()">
-        <button  class="tablinks invite" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands', '_blank')">Meghívás</a></button>
+        <img class="tablinks logo"
+            src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
+            title="Vissza a főoldalra" alt="Vissza a főoldalra"
+            onclick="document.getElementById('defaultOpen').click()">
+        <button class="tablinks invite"
+            onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands', '_blank')">Meghívás</a></button>
         <button class="tablinks" onclick="openTab(event, 'Parancsok');topFunction()">Parancsok</button>
         <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'main');topFunction()">Főoldal</button>
     </div>
-      
+</head>
+
+<body>
     <div id="main" class="tabcontent">
         <table class="mod">
-        <th>Moderálás</th>
-        <tr>
-            <td class="alcim">Korszerű moderációs parancsok, korábbi eljárások mentése</td>
-        </tr>
-        <tr>
-            <td><img class="gif" src="https://i.imgur.com/U2oddx6.gif" alt="Ban parancs működése"></td>
-        </tr>
-        <tr>
-            <td class="parancs elso">Ban ● Kick ● Warn ● Timeout ● Clear ● Lockdown</td>
-        </tr>
-        <tr>
-            <td class="parancs">Unban ● Removetimeout ● Unlockdown</td>
-        </tr>
-        <tr>
-            <td class="parancs utolso">Logs ● Bans ● Kicks ● Timeouts ● Warns</td>
-        </tr>
-    </table>
+            <th>Moderálás</th>
+            <tr>
+                <td class="alcim">Korszerű moderációs parancsok, korábbi eljárások mentése</td>
+            </tr>
+            <tr>
+                <td><img class="gif" src="https://i.imgur.com/U2oddx6.gif" alt="Ban parancs működése"></td>
+            </tr>
+            <tr>
+                <td class="parancs elso">Ban ● Kick ● Warn ● Timeout ● Clear ● Lockdown</td>
+            </tr>
+            <tr>
+                <td class="parancs">Unban ● Removetimeout ● Unlockdown</td>
+            </tr>
+            <tr>
+                <td class="parancs utolso">Logs ● Bans ● Kicks ● Timeouts ● Warns</td>
+            </tr>
+        </table>
 
-    <table class="music">
-        <th>Zenehallgatás</th>
-        <tr>
-            <td class="alcim">Zenék lejátszása könnyedén több száz oldalról</td>
-        </tr>
-        <tr>
-            <td><img class="gif" src="https://i.imgur.com/Dd8qhTo.gif" alt="Play parancs működése"></td>
-        </tr>
-        <tr>
-            <td class="felsorol elso">Zenék indítása, keresése | <p>Play ● Search</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Ranghoz, csatornához kötés | <p>DJRole ● Zenecsatorna</p></td>
-        </tr>
-        <tr>
-            <td class="parancs">Seek ● Loop ● Pause/Resume ● Volume ● Lyrics ● Filter ● Stop</td>
-        </tr>
-        <tr>
-            <td class="parancs utolso">Queue ● Clearqueue ● Skip ● Previous ● Remove ● Shuffle ● Autoplay</td>
-        </tr>
-    </table>
+        <table class="music">
+            <th>Zenehallgatás</th>
+            <tr>
+                <td class="alcim">Zenék lejátszása könnyedén több száz oldalról</td>
+            </tr>
+            <tr>
+                <td><img class="gif" src="https://i.imgur.com/Dd8qhTo.gif" alt="Play parancs működése"></td>
+            </tr>
+            <tr>
+                <td class="felsorol elso">Zenék indítása, keresése | <p>Play ● Search</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Ranghoz, csatornához kötés | <p>DJRole ● Zenecsatorna</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="parancs">Seek ● Loop ● Pause/Resume ● Volume ● Lyrics ● Filter ● Stop</td>
+            </tr>
+            <tr>
+                <td class="parancs utolso">Queue ● Clearqueue ● Skip ● Previous ● Remove ● Shuffle ● Autoplay</td>
+            </tr>
+        </table>
 
-    <table class="custom">
-        <th>Testreszabás</th>
-        <tr>
-            <td class="alcim">Egyedi funkciók hozzáadása a szerveredhez</td>
-        </tr>
-        <tr>
-            <td><img class="gif" src="https://i.imgur.com/smM9Ftb.gif" alt="Egyedi parancsok hozzáadása"></td>
-        </tr>
-        <tr>
-            <td class="felsorol elso">Egyedi parancsok létrehozása | <p>Customcommand</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Felhasználók számlálása | <p>Membercounter</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Rangok automatikus adása | <p>Autoroles</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol utolso">Üdvözlő és Búcsúzó üzenet | <p>Welcome ● Farewell</p></td>
-        </tr>
-    </table>
+        <table class="custom">
+            <th>Testreszabás</th>
+            <tr>
+                <td class="alcim">Egyedi funkciók hozzáadása a szerveredhez</td>
+            </tr>
+            <tr>
+                <td><img class="gif" src="https://i.imgur.com/smM9Ftb.gif" alt="Egyedi parancsok hozzáadása"></td>
+            </tr>
+            <tr>
+                <td class="felsorol elso">Egyedi parancsok létrehozása | <p>Customcommand</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Felhasználók számlálása | <p>Membercounter</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Rangok automatikus adása | <p>Autoroles</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol utolso">Üdvözlő és Búcsúzó üzenet | <p>Welcome ● Farewell</p>
+                </td>
+            </tr>
+        </table>
 
-    <table class="config">
-        <th>Konfigurálás</th>
-        <tr>
-            <td class="alcim">Szabd testre, hogyan viselkedjen sasOS a szervereden</td>
-        </tr>
-        <tr>
-            <td><img class="gif" src="https://i.imgur.com/vkpbGUo.gif" alt="Új prefix hozzáadása"></td>
-        </tr>
-        <tr>
-            <td class="felsorol elso">Prefix megváltoztatása | <p>Prefix</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Parancsok átnevezése | <p>Alias</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Parancsok kikapcsolása | <p>Toggle</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol utolso">Parancsok rangokhoz kötése | <p>Permissions</p></td>
-        </tr>
-    </table>
+        <table class="config">
+            <th>Konfigurálás</th>
+            <tr>
+                <td class="alcim">Szabd testre, hogyan viselkedjen sasOS a szervereden</td>
+            </tr>
+            <tr>
+                <td><img class="gif" src="https://i.imgur.com/vkpbGUo.gif" alt="Új prefix hozzáadása"></td>
+            </tr>
+            <tr>
+                <td class="felsorol elso">Prefix megváltoztatása | <p>Prefix</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Parancsok átnevezése | <p>Alias</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Parancsok kikapcsolása | <p>Toggle</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol utolso">Parancsok rangokhoz kötése | <p>Permissions</p>
+                </td>
+            </tr>
+        </table>
 
-    <table class="misc">
-        <th>Ezenfelül</th>
-        <tr>
-            <td class="alcim">További parancsok és funkciók</td>
-        </tr>
-        <tr>
-            <td><img class="gif" src="https://i.imgur.com/UWrnRDQ.gif" alt="Információk adott felhasználóról"></td>
-        </tr>
-        <tr>
-            <td class="felsorol elso">Információk a szerverről, felhasználókról | <p>Serverinfo ● Userinfo</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Profilképek különböző felbontásokban | <p>Avatar</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Youtube videónézés és játékok indítása | <p>Activities</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Szavazások létrehozása | <p>Szavazás</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Nekos.best integrálás | <p>Nekosbest</p></td>
-        </tr>
-        <tr>
-            <td class="felsorol utolso">További parancsok és használatuk | <p>Help</p></td>
-        </tr>
-    </table>
+        <table class="misc">
+            <th>Ezenfelül</th>
+            <tr>
+                <td class="alcim">További parancsok és funkciók</td>
+            </tr>
+            <tr>
+                <td><img class="gif" src="https://i.imgur.com/UWrnRDQ.gif" alt="Információk adott felhasználóról"></td>
+            </tr>
+            <tr>
+                <td class="felsorol elso">Információk a szerverről, felhasználókról | <p>Serverinfo ● Userinfo</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Profilképek különböző felbontásokban | <p>Avatar</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Youtube videónézés és játékok indítása | <p>Activities</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Szavazások létrehozása | <p>Szavazás</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol">Nekos.best integrálás | <p>Nekosbest</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="felsorol utolso">További parancsok és használatuk | <p>Help</p>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div id="Parancsok" class="tabcontent">
@@ -137,19 +160,29 @@
     </div>
 
     <script type="text/javascript" src="./index.js"></script>
-</head>
+</body>
 <footer>
     <hr>
     <table class="footer">
         <tr>
-            <td class="felsorol"><a href="https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands"> <img class="icon" src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png" alt=""</a></td>
+            <td class="felsorol"><a
+                    href="https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands">
+                    <img class="icon"
+                        src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
+                        alt="" </a></td>
         </tr>
         <tr>
-            <td class="felsorol">Rendszeres frissítések, új funkciók és fejlesztések | <p>Changelog</p></td>
+            <td class="felsorol">Rendszeres frissítések, új funkciók és fejlesztések | <p>Changelog</p>
+            </td>
         </tr>
         <tr>
-            <td class="felsorol"><p><a href="https://discord.gg/s8XtzBasQF" target="_blank">Support Szerver</a> | <a href="https://github.com/sassvagyok/sasOS-docs" target="_blank">Github</a> | </p> <p class="verzio" id="message">...</p></td>
+            <td class="felsorol">
+                <p><a href="https://discord.gg/s8XtzBasQF" target="_blank">Support Szerver</a> | <a
+                        href="https://github.com/sassvagyok/sasOS-docs" target="_blank">Github</a> | </p>
+                <p class="verzio" id="message">...</p>
+            </td>
         </tr>
     </table>
 </footer>
+
 </html>
