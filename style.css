@@ -6,6 +6,7 @@ html {
 
 body {
     background-color: #161516;
+    background-image: linear-gradient(to top, #242324, #181818);
 }
 
 th {
@@ -26,12 +27,18 @@ img.gif {
 }
 
 img.logo {
-    width: 4%;
+    width: 75px;
     float: left;
+    transition: opacity 0.2s;
+}
+
+img.logo:hover {
+    opacity: 0.65;
+    transition: opacity 0.2s;
 }
 
 img.icon {
-    width: 11%;
+    width: 8%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -141,28 +148,37 @@ h1 {
 }
 
 button.tablinks {
-    background-color: #070510;
+    background-color: #0f0f0f;
     float: right;
     border: none;
     cursor: pointer;
     padding: 10px 16px;
-    transition: 0.3s;
+    transition: 0.2s;
     font-family: 'Alexandria', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 23px;
     color: #DAEAF2;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-top: 7px;
+    border-radius: 7px;
+    margin-right: 9px;
+    margin-top: 4px;
+}
+
+button.invite {
+    background-image: linear-gradient(to top right, #3ba8ec, #1f8ac4);
+    color: #ffffff;
 }
 
 .tab button:hover {
-    background-color: #DAEAF2;
-    color: #070510;
+    background-color: #39393a;
+}
+
+.tab button.invite:hover {
+    background-image: linear-gradient(to top right, #1f8ac4, #3ba8ec);
+    color: #ffffff;
 }
 
 .tab button.active {
-    background-color: #DAEAF2;
+    background-color: #e7e7e7;
     color: #070510;
 }
 
@@ -210,14 +226,4 @@ a:visited {
 a:hover {
     color: #65bbf0;
     text-decoration: none;
-}
-
-@keyframes fadeEffect {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }

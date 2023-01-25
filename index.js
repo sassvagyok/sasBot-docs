@@ -16,14 +16,14 @@ function openTab(evt, tabName) {
 }
 document.getElementById("defaultOpen").click();
 
-let mybutton = document.getElementById("topButton");
+let button = document.getElementById("topButton");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-        mybutton.style.display = "block";
+        button.style.display = "block";
     } else {
-        mybutton.style.display = "none";
+        button.style.display = "none";
     }
 }
 
