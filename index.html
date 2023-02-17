@@ -12,14 +12,13 @@
 
     <button onclick="topFunction()" id="topButton" title="Fel">Fel</button>
     <div class="tab">
-        <img class="tablinks logo"
+        <img class="tablinks logo" id="defaultOpen" onclick="openTab(event, 'main');topFunction()"
             src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
             title="Vissza a főoldalra" alt="Vissza a főoldalra"
             onclick="document.getElementById('defaultOpen').click()">
         <button class="tablinks invite"
             onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands', '_blank')">Meghívás</a></button>
         <button class="tablinks" onclick="openTab(event, 'Parancsok');topFunction()">Parancsok</button>
-        <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'main');topFunction()">Főoldal</button>
     </div>
 </head>
 
@@ -156,7 +155,7 @@
     </div>
 
     <div id="Parancsok" class="tabcontent">
-        <button type="button" class="collapsible first">Zenelejátszás</button>
+        <button type="button" class="collapsible">Zenelejátszás</button>
         <div class="content">
           <table class="parancsok">
             <tr>
@@ -470,7 +469,7 @@
           <table class="parancsok">
             <tr>
                 <td class="title command">Parancs</td>
-                <td class="title">Használat</td>
+                <td class="title usage">Használat</td>
                 <td class="title description">Leírás</td>
                 <td class="title required">Szükséges</td>
             </tr>
@@ -590,7 +589,7 @@
             </tr>
           </table>
         </div>
-        <button type="button" class="collapsible last">sasOS</button>
+        <button type="button" class="collapsible">sasOS</button>
         <div class="content">
           <table class="parancsok">
             <tr>
@@ -653,20 +652,24 @@
     <hr>
     <table class="footer feature">
         <tr>
-            <td class="felsorol"><a
-                    href="https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands">
-                    <img class="icon"
-                        src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
-                        alt="" </a></td>
-        </tr>
-        <tr>
-            <td class="felsorol">Rendszeres frissítések, új funkciók és fejlesztések | <p>Changelog</p>
+            <td class="felsorol">
+                <img class="tablinks icon" onclick="openTab(event, 'main');topFunction()"
+                    src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
+                    title="Vissza a főoldalra" alt="Vissza a főoldalra"
+                    onclick="document.getElementById('defaultOpen').click()">
             </td>
         </tr>
         <tr>
             <td class="felsorol">
-                <p><a href="https://discord.gg/s8XtzBasQF" target="_blank">Support Szerver</a> | <a
-                        href="https://github.com/sassvagyok/sasOS-docs" target="_blank">Github</a> | </p>
+                Rendszeres frissítések, új funkciók és fejlesztések | <p>Changelog</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="felsorol">
+                <p>
+                    <a href="https://discord.gg/s8XtzBasQF" target="_blank">Support Szerver</a> |
+                    <a href="https://github.com/sassvagyok/sasOS-docs" target="_blank">Github</a> |
+                </p>
                 <p class="verzio" id="message">...</p>
             </td>
         </tr>
