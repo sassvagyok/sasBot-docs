@@ -6,7 +6,7 @@ html {
 
 body {
     background-color: #1a1a1a;
-    min-height: 98vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -138,15 +138,6 @@ p.verzio {
     font-weight: 300; 
 }
 
-h1 {
-    font-family: 'Alexandria', sans-serif;
-    font-weight: 600;
-    text-align: center;
-    font-size: 40px;
-    padding: 40px;
-    color: #e6eff3;
-}
-
 .tab {
     position: sticky;
     top: 10px;
@@ -240,7 +231,7 @@ button.invite {
     transition: 0.2s;
 }
 .tabcontent {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 .collapsible:hover {
     background-color: #39393a;
@@ -266,7 +257,7 @@ table.parancsok {
     border: 1px solid #222222;
     border-spacing: 0;
     table-layout: fixed;
-    width: 70%;
+    width: 65%;
     overflow: hidden;
 }
 
@@ -294,9 +285,33 @@ td.required {
     width: 17%;
 }
 
-button.last {
+table.legend {
+    background-color: #141414;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 13px;
+    border: 1px solid #222222;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 17%;
+    overflow: hidden;
+    margin-top: 75px;
     margin-bottom: 0;
 }
+
+table.legend td {
+    text-align: middle;
+    padding-left: 10px;
+    border: 1px solid #222222;
+    line-height: 80%;
+    font-size: 15px;
+}
+
+td.column1 {
+    width: 22%;
+}
+
 a:link {
     color: #3099DC;
     text-decoration: none;
