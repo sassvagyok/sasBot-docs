@@ -1,4 +1,4 @@
-#### Dokumentáció sasOS Discord bothoz.
+### Dokumentáció sasOS Discord bothoz.
 https://sassvagyok.github.io/sasOS-docs/
 
-##### Discord: #matte#2993
+##### Discord: matte#2993
