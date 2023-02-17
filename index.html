@@ -25,7 +25,7 @@
 
 <body>
     <div id="main" class="tabcontent">
-        <table class="mod">
+        <table class="feature mod">
             <th>Moderálás</th>
             <tr>
                 <td class="alcim">Korszerű moderációs parancsok, korábbi eljárások mentése</td>
@@ -44,7 +44,7 @@
             </tr>
         </table>
 
-        <table class="music">
+        <table class="feature music">
             <th>Zenehallgatás</th>
             <tr>
                 <td class="alcim">Zenék lejátszása könnyedén több száz oldalról</td>
@@ -68,7 +68,7 @@
             </tr>
         </table>
 
-        <table class="custom">
+        <table class="feature custom">
             <th>Testreszabás</th>
             <tr>
                 <td class="alcim">Egyedi funkciók hozzáadása a szerveredhez</td>
@@ -94,7 +94,7 @@
             </tr>
         </table>
 
-        <table class="config">
+        <table class="feature config">
             <th>Konfigurálás</th>
             <tr>
                 <td class="alcim">Szabd testre, hogyan viselkedjen sasOS a szervereden</td>
@@ -120,7 +120,7 @@
             </tr>
         </table>
 
-        <table class="misc">
+        <table class="feature misc">
             <th>Ezenfelül</th>
             <tr>
                 <td class="alcim">További parancsok és funkciók</td>
@@ -156,14 +156,166 @@
     </div>
 
     <div id="Parancsok" class="tabcontent">
-        <h1>W.I.P.</h1>
+        <button type="button" class="collapsible first">Zenelejátszás</button>
+        <div class="content">
+          <table class="parancsok">
+            <tr>
+                <td class="title command">Parancs</td>
+                <td class="title">Használat</td>
+                <td class="title description">Leírás</td>
+                <td class="title required">Szükséges</td>
+            </tr>
+            <tr>
+                <td>autoplay [ap]</td>
+                <td>-</td>
+                <td>Automatikus lejátszási be-, és kikapcsolása a lejátszási sorban lévő zenék alapján.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>clearqueue [cq]</td>
+                <td>-<amongr></td>
+                <td>Soron következő összes zene törlése a lejátszási sorból.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>djrole [dr]</td>
+                <td>/rangID/név/"kikapcsolás"/</td>
+                <td>DJ rang követelmény beállítása a kívánt rang nevének megadása után, vagy be- és kikapcsolás.</td>
+                <td>Adminisztrátor</td>
+            </tr>
+            <tr>
+                <td>filter [f]</td>
+                <td><filter neve/"kikapcsolás"></td>
+                <td>Választható hangfilterek hozzáadása a zenékhez.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>loop [l]</td>
+                <td>/"be"/"queue"/"ki"/</td>
+                <td>Ismétlés beállítása a jelenlegi zenére, lejátszási sorra, vagy ennek kikapcsolása.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>lyrics [ly]</td>
+                <td>/zene/</td>
+                <td>Jelenleg lejátszott vagy megadott zene szövegének megnézése.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>most</td>
+                <td>-</td>
+                <td>Különböző információk a jelenleg lejátszott zenéről, és annak irányítása.</td>
+                <td>Hang csatlakozás*</td>
+            </tr>
+            <tr>
+                <td>pause [pa]</td>
+                <td>-</td>
+                <td>Jelenleg lejátszott zene megállítása a lejátszási sor törlése nélkül.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>play [p;join]</td>
+                <td>/zene név/link/playlist/album link/</td>
+                <td>Zene nevének/linkjének vagy playlist/album linkjének beírása után megadott zene lejátszása, több száz oldalról.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>previous [back;prev]</td>
+                <td>-</td>
+                <td>Előző zenék lejátszása, ha vannak.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>queue [q]</td>
+                <td>-</td>
+                <td>A lejátszási sorban lévő zenék megnézése, annak törlése és egyéb műveletek végrehajtása.</td>
+                <td>Hang csatlakozás*</td>
+            </tr>
+            <tr>
+                <td>queueinfo [qi]</td>
+                <td>-</td>
+                <td>Különböző információk a jelenlegi lejátszási beállításokról.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>remove [rem]</td>
+                <td><zene száma></td>
+                <td>Zene sorszámának beírása után annak törlése a lejátszási sorból.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>resume [re]</td>
+                <td>-</td>
+                <td>Megállított zene lejátszásának folytatása.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>search</td>
+                <td>/zene neve/</td>
+                <td>Zene keresése, majd választott zene lejátszása.</td>
+                <td>Hang csatlakozás*</td>
+            </tr>
+            <tr>
+                <td>seek</td>
+                <td><másodperc></td>
+                <td>Megadott másodperchez való ugrás a jelenleg lejátszott zenében.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>shuffle [sh]</td>
+                <td>-</td>
+                <td>A lejátszási sorban lévő zenék lejátszási sorrendjének megkeverése.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>skip [next;n;sk]</td>
+                <td>/zenék száma/</td>
+                <td>Ugrás a következő zenére, vagy megadott számú zene átugrása.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>stop [st;leave]</td>
+                <td>-</td>
+                <td>Zene lejátszásának leállítása, lejátszási sor törlése és kilépés a voice channelből.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>volume [v]</td>
+                <td><hangerő></td>
+                <td>Zene hangerejének változtatása maximum 250-ig.</td>
+                <td>Hang csatlakozás</td>
+            </tr>
+            <tr>
+                <td>zenecsatorna [zcs]</td>
+                <td>/csatorna/</td>
+                <td>Zene parancsok beállítása, hogy csak a megadott csatornában legyenek használhatóak.</td>
+                <td>Adminisztrátor</td>
+            </tr>
+          </table>
+        </div>
+        <button type="button" class="collapsible">Moderáció</button>
+        <div class="content">
+          <p>W.I.P.</p>
+        </div>
+        <button type="button" class="collapsible">Konfigurálás</button>
+        <div class="content">
+          <p>W.I.P.</p>
+        </div>
+        <button type="button" class="collapsible">Egyéb</button>
+        <div class="content">
+          <p>W.I.P.</p>
+        </div>
+        <button type="button" class="collapsible last">sasOS</button>
+        <div class="content">
+          <p>W.I.P.</p>
+        </div>
     </div>
 
     <script type="text/javascript" src="./index.js"></script>
 </body>
 <footer>
     <hr>
-    <table class="footer">
+    <table class="footer feature">
         <tr>
             <td class="felsorol"><a
                     href="https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands">

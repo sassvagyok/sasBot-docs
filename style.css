@@ -5,7 +5,10 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to top, #242324, #181818);
+    background-color: #1a1a1a;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
 }
 
 th {
@@ -14,7 +17,7 @@ th {
     font-size: 37px;
     padding-top: 25px;
     padding-bottom: 0px;
-    color: #DAEAF2;
+    color: #e6eff3;
 }
 
 img.gif {
@@ -62,7 +65,7 @@ table.misc {
     background-image: linear-gradient(to top right, #8028BF, #54178A);
 }
 
-table {
+table.feature {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
@@ -71,12 +74,16 @@ table {
 }
 
 hr {
-    margin-top: 100px;
+    margin-top: 80px;
     width: 750px;
 }
+
 table.footer {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+}
+
+footer {
+    margin-top: auto;
 }
 
 td {
@@ -86,7 +93,7 @@ td {
     font-size: 16px;
     padding-bottom: 8px;
     padding-top: 10px;
-    color: #DAEAF2;
+    color: #e6eff3;
 }
 
 td.alcim {
@@ -137,7 +144,7 @@ h1 {
     text-align: center;
     font-size: 40px;
     padding: 40px;
-    color: #DAEAF2;
+    color: #e6eff3;
 }
 
 .tab {
@@ -156,7 +163,7 @@ button.tablinks {
     font-family: 'Alexandria', sans-serif;
     font-weight: 500;
     font-size: 23px;
-    color: #DAEAF2;
+    color: #e6eff3;
     border-radius: 7px;
     margin-right: 9px;
     margin-top: 4px;
@@ -196,7 +203,7 @@ button.invite {
     border: none;
     outline: none;
     background-color: #070510;
-    color: #DAEAF2;
+    color: #e6eff3;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
@@ -208,10 +215,88 @@ button.invite {
 }
 
 #topButton:hover {
-    background-color: #DAEAF2;
+    background-color: #e6eff3;
     color: #070510;
 }
 
+.collapsible {
+    background-color: #0f0f0f;
+    color: #e6eff3;
+    cursor: pointer;
+    padding: 18px;
+    width: 20%;
+    border: none;
+    text-align: middle;
+    outline: none;
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+.tabcontent {
+    padding-top: 80px;
+}
+.collapsible:hover {
+    background-color: #39393a;
+}
+.active {
+    background-color: #e6eff3;
+    color: #070510;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+table.parancsok {
+    background-color: #141414;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 13px;
+    border: 1px solid #222222;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 70%;
+    overflow: hidden;
+}
+
+table.parancsok td {
+    text-align: middle;
+    padding-left: 10px;
+    border: 1px solid #222222;
+    line-height: 150%;
+}
+td.title {
+    background-color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+td.description {
+    width: 35%;
+}
+
+td.command {
+    width: 20%;
+}
+
+td.required {
+    width: 17%;
+}
+
+button.last {
+    margin-bottom: 0;
+}
 a:link {
     color: #3099DC;
     text-decoration: none;

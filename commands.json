@@ -1,8 +1,0 @@
-[
-    {
-        "command": "teszt",
-        "description": "ez egy teszt parancs",
-        "info": "ez egy teszt parancs hosszú leírása",
-        "usage": "test <testelni való cucc>"
-    }
-]
