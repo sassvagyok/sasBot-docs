@@ -248,7 +248,6 @@ button.invite {
 .content {
     padding: 0 18px;
     display: none;
-    overflow: hidden;
     background-color: transparent;
 }
 
