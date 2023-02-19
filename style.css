@@ -2,13 +2,22 @@
 
 html {
     scroll-behavior: smooth;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-    background-image: linear-gradient(to top, #1b1a1a, #0c1b25);
-    min-height: 100vh;
+    background-image: linear-gradient(to top, #202020, #0f212e);
     display: flex;
     flex-direction: column;
+    margin: 0 0 100px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 th {
@@ -40,23 +49,23 @@ img.icon:hover {
 }
 
 table.mod {
-    background-image: linear-gradient(to top right, #10789E, #0B4B6E);
+    background-image: linear-gradient(to top, #b92511, #79100d);
 }
 
 table.music {
-    background-image: linear-gradient(to top right, #CC9C00, #BA4F11);
+    background-image: linear-gradient(to top, #cc8500, #b3490c);
 }
 
 table.custom {
-    background-image: linear-gradient(to top right, #31AA47, #1B5E28);
+    background-image: linear-gradient(to top, #16942d, #0c6614);
 }
 
 table.config {
-    background-image: linear-gradient(to top right, #666666, #353535);
+    background-image: linear-gradient(to top, #206ccf, #084094);
 }
 
 table.misc {
-    background-image: linear-gradient(to top right, #8028BF, #54178A);
+    background-image: linear-gradient(to top, #7e1cc4, #4b0e81);
 }
 
 table.feature {
@@ -74,10 +83,6 @@ hr {
 
 table.footer {
     margin-bottom: 0;
-}
-
-footer {
-    margin-top: auto;
 }
 
 td {
@@ -209,19 +214,18 @@ button.invite {
     background-color: #0f0f0f;
     color: #e6eff3;
     cursor: pointer;
-    padding: 18px;
-    width: 330px;
+    padding: 15px;
+    width: 300px;
     border: none;
     text-align: middle;
     outline: none;
-    font-size: 15px;
     display: block;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 0;
     font-family: 'Alexandria', sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 24px;
     border-radius: 12px;
     transition: 0.2s;
 }
@@ -294,8 +298,17 @@ td.required {
     margin-bottom: 20px;
     margin-top: 10px;
     border: 0;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 10px;
+    outline: none;
+    transition: width 0.2s ease-in-out;
+    width: 230px;
+}
+
+#pInput:focus {
+    border: none;
+    width: 430px;
+    background-color: #1d1d1d;
 }
 
 .pInput {
