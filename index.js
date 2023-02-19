@@ -51,7 +51,6 @@ function searchFunction() {
   var input, filter, tr, td, i;
   input = document.getElementById("pInput");
   filter = input.value.toUpperCase();
-  console.log(filter)
 
   for (i = 0; i < coll.length; i++) {
     coll[i].classList.toggle("active");
