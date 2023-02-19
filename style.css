@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-color: #1a1a1a;
+    background-image: linear-gradient(to top, #1b1a1a, #0c1b25);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,21 +28,15 @@ img.gif {
     box-shadow: 7px 7px 30px #000000;
 }
 
-img.logo {
-    width: 85px;
-    float: left;
-    transition: opacity 0.2s;
-}
-
-img.logo:hover {
-    opacity: 0.5;
-    transition: opacity 0.2s;
-}
-
 img.icon {
-    width: 10%;
+    width: 12%;
     margin-left: auto;
     margin-right: auto;
+}
+
+img.icon:hover {
+    opacity: 0.5;
+    transition: opacity 0.2s;
 }
 
 table.mod {
@@ -74,8 +68,8 @@ table.feature {
 }
 
 hr {
-    margin-top: 80px;
-    width: 750px;
+    margin-top: 50px;
+    width: 850px;
 }
 
 table.footer {
@@ -142,6 +136,8 @@ p.verzio {
     position: sticky;
     top: 10px;
     overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 button.tablinks {
@@ -153,7 +149,7 @@ button.tablinks {
     transition: 0.2s;
     font-family: 'Alexandria', sans-serif;
     font-weight: 500;
-    font-size: 23px;
+    font-size: 22px;
     color: #e6eff3;
     border-radius: 7px;
     margin-right: 9px;
@@ -179,10 +175,6 @@ button.invite {
     color: #070510;
 }
 
-.tab img.active {
-    background-color: transparent;
-}
-
 .tabcontent {
     display: none;
     border-top: none;
@@ -197,17 +189,15 @@ button.invite {
     right: 30px;
     z-index: 99;
     border: none;
-    outline: none;
-    background-color: #070510;
+    background-color: #07050f;
     color: #e6eff3;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.3s;
     font-family: 'Alexandria', sans-serif;
     font-weight: 400;
-    font-size: 18px;
 }
 
 #topButton:hover {
@@ -220,7 +210,7 @@ button.invite {
     color: #e6eff3;
     cursor: pointer;
     padding: 18px;
-    width: 380px;
+    width: 330px;
     border: none;
     text-align: middle;
     outline: none;
@@ -230,19 +220,18 @@ button.invite {
     margin-top: 20px;
     margin-bottom: 0;
     font-family: 'Alexandria', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 26px;
     border-radius: 12px;
     transition: 0.2s;
 }
 
-.collapsible:hover {
-    background-color: #39393a;
+.first {
+    margin-top: 10px;
 }
 
-.active {
-    background-color: #e6eff3;
-    color: #070510;
+.collapsible:hover {
+    background-color: #39393a;
 }
 
 .content {
@@ -260,7 +249,7 @@ table.parancsok {
     border: 1px solid #222222;
     border-spacing: 0;
     table-layout: fixed;
-    width: 1300px;
+    width: 1150px;
     overflow: hidden;
 }
 
@@ -269,6 +258,7 @@ table.parancsok td {
     padding-left: 10px;
     border: 1px solid #222222;
     line-height: 150%;
+    font-size: 15px;
 }
 td.title {
     background-color: #0c0c0c;
@@ -276,16 +266,47 @@ td.title {
     font-weight: 500;
 }
 
-td.description {
-    width: 37%;
+td.command {
+    width: 15%;
 }
 
-td.command {
+td.usage {
     width: 20%;
+}
+
+td.description {
+    width: 30%;
 }
 
 td.required {
     width: 15%;
+}
+
+#pInput {
+    font-family: 'Alexandria', sans-serif;
+    background-color: #131313;
+    font-size: 17px;
+    font-weight: 400;
+    color: #e6eff3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.pInput {
+    background-color: #0f0f0f;
+    font-size: 100px;
+    font-weight: 400;
+    color: #e6eff3;
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
 }
 
 table.legend {

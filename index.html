@@ -12,19 +12,21 @@
 
     <button onclick="topFunction()" id="topButton" title="Fel">Fel</button>
     <div class="tab">
-        <img class="tablinks logo" id="defaultOpen" onclick="openTab(event, 'main');topFunction()"
-            src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
-            title="Vissza a főoldalra" alt="Vissza a főoldalra"
-            onclick="document.getElementById('defaultOpen').click()">
         <button class="tablinks invite"
-            onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands', '_blank')">Meghívás</a></button>
-        <button class="tablinks" onclick="openTab(event, 'Parancsok');topFunction()">Parancsok</button>
+            onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=742556187425505312&permissions=1099817020631&scope=bot%20applications.commands', '_blank')">Meghívás
+        </button>
+        <button class="tablinks"
+            onclick="openTab(event, 'Parancsok');topFunction()">Parancsok
+        </button>
+        <button class="tablinks" id="defaultOpen"
+            onclick="openTab(event, 'main');topFunction()">Funkciók
+        </button>
     </div>
 </head>
 
 <body>
     <div id="main" class="tabcontent">
-        <table class="feature mod">
+        <table class="feature mod first">
             <th>Moderálás</th>
             <tr>
                 <td class="alcim">Korszerű moderációs parancsok, korábbi eljárások mentése</td>
@@ -155,12 +157,13 @@
     </div>
 
     <div id="Parancsok" class="tabcontent">
-        <button type="button" class="collapsible">Zenelejátszás</button>
+        <input type="text" id="pInput" onkeyup="searchFunction()" placeholder="Parancs keresése...">
+        <button type="button" class="collapsible first">Zenelejátszás</button>
         <div class="content">
-          <table class="parancsok">
+          <table class="parancsok" id="parancsok">
             <tr>
                 <td class="title command">Parancs</td>
-                <td class="title">Használat</td>
+                <td class="title usage">Használat</td>
                 <td class="title description">Leírás</td>
                 <td class="title required">Szükséges</td>
             </tr>
@@ -297,7 +300,7 @@
           <table class="parancsok">
             <tr>
                 <td class="title command">Parancs</td>
-                <td class="title">Használat</td>
+                <td class="title usage">Használat</td>
                 <td class="title description">Leírás</td>
                 <td class="title required">Szükséges</td>
             </tr>
@@ -392,7 +395,7 @@
           <table class="parancsok">
             <tr>
                 <td class="title command">Parancs</td>
-                <td class="title">Használat</td>
+                <td class="title usage">Használat</td>
                 <td class="title description">Leírás</td>
                 <td class="title required">Szükséges</td>
             </tr>
@@ -594,7 +597,7 @@
           <table class="parancsok">
             <tr>
                 <td class="title command">Parancs</td>
-                <td class="title">Használat</td>
+                <td class="title usage">Használat</td>
                 <td class="title description">Leírás</td>
                 <td class="title required">Szükséges</td>
             </tr>
@@ -653,10 +656,9 @@
     <table class="footer feature">
         <tr>
             <td class="felsorol">
-                <img class="tablinks icon" onclick="openTab(event, 'main');topFunction()"
+                <img class="icon" onclick="document.getElementById('defaultOpen').click();topFunction()"
                     src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
-                    title="Vissza a főoldalra" alt="Vissza a főoldalra"
-                    onclick="document.getElementById('defaultOpen').click()">
+                    title="Vissza a főoldalra" alt="Vissza a főoldalra">
             </td>
         </tr>
         <tr>

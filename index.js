@@ -45,7 +45,43 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
-} 
+}
+
+function searchFunction() {
+  var input, filter, tr, td, i;
+  input = document.getElementById("pInput");
+  filter = input.value.toUpperCase();
+  console.log(filter)
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].classList.toggle("active");
+      var content = coll[i].nextElementSibling;
+      if(filter.length > 0){
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+  }
+
+  tables = document.querySelectorAll(".parancsok")
+
+  tables.forEach(function(table) {
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        if (!tr[i].classList.contains('header')) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+    }
+}); 
+}
 
 document.addEventListener("DOMContentLoaded", async function(){
     const fetched = await fetch(`https://api.github.com/repos/sassvagyok/sasOS-docs/commits/main`)
