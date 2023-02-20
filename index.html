@@ -25,657 +25,640 @@
 </head>
 
 <body>
-    <div id="main" class="tabcontent">
-        <table class="feature mod first">
-            <th>Moderálás</th>
-            <tr>
-                <td class="alcim">Korszerű moderációs parancsok, korábbi eljárások mentése</td>
-            </tr>
-            <tr>
-                <td><img class="gif" src="https://i.imgur.com/U2oddx6.gif" alt="Ban parancs működése"></td>
-            </tr>
-            <tr>
-                <td class="parancs elso">Ban ● Kick ● Warn ● Timeout ● Clear ● Lockdown</td>
-            </tr>
-            <tr>
-                <td class="parancs">Unban ● Removetimeout ● Unlockdown</td>
-            </tr>
-            <tr>
-                <td class="parancs utolso">Logs ● Bans ● Kicks ● Timeouts ● Warns</td>
-            </tr>
-        </table>
-
-        <table class="feature music">
-            <th>Zenehallgatás</th>
-            <tr>
-                <td class="alcim">Zenék lejátszása könnyedén több száz oldalról</td>
-            </tr>
-            <tr>
-                <td><img class="gif" src="https://i.imgur.com/Dd8qhTo.gif" alt="Play parancs működése"></td>
-            </tr>
-            <tr>
-                <td class="felsorol elso">Zenék indítása, keresése | <p>Play ● Search</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Ranghoz, csatornához kötés | <p>DJRole ● Zenecsatorna</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="parancs">Seek ● Loop ● Pause/Resume ● Volume ● Lyrics ● Filter ● Stop</td>
-            </tr>
-            <tr>
-                <td class="parancs utolso">Queue ● Clearqueue ● Skip ● Previous ● Remove ● Shuffle ● Autoplay</td>
-            </tr>
-        </table>
-
-        <table class="feature custom">
-            <th>Testreszabás</th>
-            <tr>
-                <td class="alcim">Egyedi funkciók hozzáadása a szerveredhez</td>
-            </tr>
-            <tr>
-                <td><img class="gif" src="https://i.imgur.com/smM9Ftb.gif" alt="Egyedi parancsok hozzáadása"></td>
-            </tr>
-            <tr>
-                <td class="felsorol elso">Egyedi parancsok létrehozása | <p>Customcommand</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Felhasználók számlálása | <p>Membercounter</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Rangok automatikus adása | <p>Autoroles</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol utolso">Üdvözlő és Búcsúzó üzenet | <p>Welcome ● Farewell</p>
-                </td>
-            </tr>
-        </table>
-
-        <table class="feature config">
-            <th>Konfigurálás</th>
-            <tr>
-                <td class="alcim">Szabd testre, hogyan viselkedjen sasOS a szervereden</td>
-            </tr>
-            <tr>
-                <td><img class="gif" src="https://i.imgur.com/vkpbGUo.gif" alt="Új prefix hozzáadása"></td>
-            </tr>
-            <tr>
-                <td class="felsorol elso">Prefix megváltoztatása | <p>Prefix</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Parancsok átnevezése | <p>Alias</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Parancsok kikapcsolása | <p>Toggle</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol utolso">Parancsok rangokhoz kötése | <p>Permissions</p>
-                </td>
-            </tr>
-        </table>
-
-        <table class="feature misc">
-            <th>Ezenfelül</th>
-            <tr>
-                <td class="alcim">További parancsok és funkciók</td>
-            </tr>
-            <tr>
-                <td><img class="gif" src="https://i.imgur.com/UWrnRDQ.gif" alt="Információk adott felhasználóról"></td>
-            </tr>
-            <tr>
-                <td class="felsorol elso">Információk a szerverről, felhasználókról | <p>Serverinfo ● Userinfo</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Profilképek különböző felbontásokban | <p>Avatar</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Youtube videónézés és játékok indítása | <p>Activities</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Szavazások létrehozása | <p>Szavazás</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol">Nekos.best integrálás | <p>Nekosbest</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="felsorol utolso">További parancsok és használatuk | <p>Help</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="Parancsok" class="tabcontent">
-        <input type="text" id="pInput" onkeyup="searchFunction()" placeholder="Parancs keresése...">
-        <button type="button" class="collapsible">Zenelejátszás</button>
-        <div class="content">
-          <table class="parancsok" id="parancsok">
-            <tr>
-                <td class="title command">Parancs</td>
-                <td class="title usage">Használat</td>
-                <td class="title description">Leírás</td>
-                <td class="title required">Szükséges</td>
-            </tr>
-            <tr>
-                <td>autoplay [ap]</td>
-                <td>-</td>
-                <td>Automatikus lejátszási be-, és kikapcsolása a lejátszási sorban lévő zenék alapján.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>clearqueue [cq]</td>
-                <td>-<amongr></td>
-                <td>Soron következő összes zene törlése a lejátszási sorból.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>djrole [dr]</td>
-                <td>/rangID/név/"kikapcsolás"/</td>
-                <td>DJ rang követelmény beállítása a kívánt rang nevének megadása után, vagy be- és kikapcsolás.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>filter [f]</td>
-                <td>&ltfilter neve/"kikapcsolás"&gt</td>
-                <td>Választható hangfilterek hozzáadása a zenékhez.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>loop [l]</td>
-                <td>/"be"/"queue"/"ki"/</td>
-                <td>Ismétlés beállítása a jelenlegi zenére, lejátszási sorra, vagy ennek kikapcsolása.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>lyrics [ly]</td>
-                <td>/zene/</td>
-                <td>Jelenleg lejátszott vagy megadott zene szövegének megnézése.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>most</td>
-                <td>-</td>
-                <td>Különböző információk a jelenleg lejátszott zenéről, és annak irányítása.</td>
-                <td>Hang csatlakozás*</td>
-            </tr>
-            <tr>
-                <td>pause [pa]</td>
-                <td>-</td>
-                <td>Jelenleg lejátszott zene megállítása a lejátszási sor törlése nélkül.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>play [p;join]</td>
-                <td>/zene név/link/playlist/album link/</td>
-                <td>Zene nevének/linkjének vagy playlist/album linkjének beírása után megadott zene lejátszása, több száz oldalról.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>previous [back;prev]</td>
-                <td>-</td>
-                <td>Előző zenék lejátszása, ha vannak.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>queue [q]</td>
-                <td>-</td>
-                <td>A lejátszási sorban lévő zenék megnézése, annak törlése és egyéb műveletek végrehajtása.</td>
-                <td>Hang csatlakozás*</td>
-            </tr>
-            <tr>
-                <td>queueinfo [qi]</td>
-                <td>-</td>
-                <td>Különböző információk a jelenlegi lejátszási beállításokról.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>remove [rem]</td>
-                <td>&ltzene száma&gt</td>
-                <td>Zene sorszámának beírása után annak törlése a lejátszási sorból.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>resume [re]</td>
-                <td>-</td>
-                <td>Megállított zene lejátszásának folytatása.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>search</td>
-                <td>/zene neve/</td>
-                <td>Zene keresése, majd választott zene lejátszása.</td>
-                <td>Hang csatlakozás*</td>
-            </tr>
-            <tr>
-                <td>seek</td>
-                <td>&ltmásodperc&gt</td>
-                <td>Megadott másodperchez való ugrás a jelenleg lejátszott zenében.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>shuffle [sh]</td>
-                <td>-</td>
-                <td>A lejátszási sorban lévő zenék lejátszási sorrendjének megkeverése.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>skip [next;n;sk]</td>
-                <td>/zenék száma/</td>
-                <td>Ugrás a következő zenére, vagy megadott számú zene átugrása.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>stop [st;leave]</td>
-                <td>-</td>
-                <td>Zene lejátszásának leállítása, lejátszási sor törlése és kilépés a voice channelből.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>volume [v]</td>
-                <td>&lthangerő&gt</td>
-                <td>Zene hangerejének változtatása maximum 250-ig.</td>
-                <td>Hang csatlakozás</td>
-            </tr>
-            <tr>
-                <td>zenecsatorna [zcs]</td>
-                <td>/csatorna/</td>
-                <td>Zene parancsok beállítása, hogy csak a megadott csatornában legyenek használhatóak.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-          </table>
+    <header>
+        <div id="main" class="tabcontent">
+            <table class="feature mod first">
+                <th>Moderálás</th>
+                <tr>
+                    <td class="alcim">Korszerű moderációs parancsok, korábbi eljárások mentése</td>
+                </tr>
+                <tr>
+                    <td><img class="gif" src="https://i.imgur.com/U2oddx6.gif" alt="Ban parancs működése"></td>
+                </tr>
+                <tr>
+                    <td class="parancs elso">Ban ● Kick ● Warn ● Timeout ● Clear ● Lockdown</td>
+                </tr>
+                <tr>
+                    <td class="parancs">Unban ● Removetimeout ● Unlockdown</td>
+                </tr>
+                <tr>
+                    <td class="parancs utolso">Logs ● Bans ● Kicks ● Timeouts ● Warns</td>
+                </tr>
+            </table>
+    
+            <table class="feature music">
+                <th>Zenehallgatás</th>
+                <tr>
+                    <td class="alcim">Zenék lejátszása könnyedén több száz oldalról</td>
+                </tr>
+                <tr>
+                    <td><img class="gif" src="https://i.imgur.com/Dd8qhTo.gif" alt="Play parancs működése"></td>
+                </tr>
+                <tr>
+                    <td class="felsorol elso">Zenék indítása, keresése | <p>Play ● Search</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Ranghoz, csatornához kötés | <p>DJRole ● Zenecsatorna</p></td>
+                </tr>
+                <tr>
+                    <td class="parancs">Seek ● Loop ● Pause/Resume ● Volume ● Lyrics ● Filter ● Stop</td>
+                </tr>
+                <tr>
+                    <td class="parancs utolso">Queue ● Clearqueue ● Skip ● Previous ● Remove ● Shuffle ● Autoplay</td>
+                </tr>
+            </table>
+    
+            <table class="feature custom">
+                <th>Testreszabás</th>
+                <tr>
+                    <td class="alcim">Egyedi funkciók hozzáadása a szerveredhez</td>
+                </tr>
+                <tr>
+                    <td><img class="gif" src="https://i.imgur.com/smM9Ftb.gif" alt="Egyedi parancsok hozzáadása"></td>
+                </tr>
+                <tr>
+                    <td class="felsorol elso">Egyedi parancsok létrehozása | <p>Customcommand</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Felhasználók számlálása | <p>Membercounter</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Rangok automatikus adása | <p>Autoroles</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol utolso">Üdvözlő és Búcsúzó üzenet | <p>Welcome ● Farewell</p></td>
+                </tr>
+            </table>
+    
+            <table class="feature config">
+                <th>Konfigurálás</th>
+                <tr>
+                    <td class="alcim">Szabd testre, hogyan viselkedjen sasOS a szervereden</td>
+                </tr>
+                <tr>
+                    <td><img class="gif" src="https://i.imgur.com/vkpbGUo.gif" alt="Új prefix hozzáadása"></td>
+                </tr>
+                <tr>
+                    <td class="felsorol elso">Prefix megváltoztatása | <p>Prefix</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Parancsok átnevezése | <p>Alias</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Parancsok kikapcsolása | <p>Toggle</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol utolso">Parancsok rangokhoz kötése | <p>Permissions</p></td>
+                </tr>
+            </table>
+    
+            <table class="feature misc">
+                <th>Ezenfelül</th>
+                <tr>
+                    <td class="alcim">További parancsok és funkciók</td>
+                </tr>
+                <tr>
+                    <td><img class="gif" src="https://i.imgur.com/UWrnRDQ.gif" alt="Információk adott felhasználóról"></td>
+                </tr>
+                <tr>
+                    <td class="felsorol elso">Információk a szerverről, felhasználókról | <p>Serverinfo ● Userinfo</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Profilképek különböző felbontásokban | <p>Avatar</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Youtube videónézés és játékok indítása | <p>Activities</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Szavazások létrehozása | <p>Szavazás</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol">Nekos.best integrálás | <p>Nekosbest</p></td>
+                </tr>
+                <tr>
+                    <td class="felsorol utolso">További parancsok és használatuk | <p>Help</p></td>
+                </tr>
+            </table>
         </div>
-        <button type="button" class="collapsible">Moderáció</button>
-        <div class="content">
-          <table class="parancsok">
-            <tr>
-                <td class="title command">Parancs</td>
-                <td class="title usage">Használat</td>
-                <td class="title description">Leírás</td>
-                <td class="title required">Szükséges</td>
-            </tr>
-            <tr>
-                <td>ban [b]</td>
-                <td>&lt@felhasználó&gt /időtartam/ /indok/</td>
-                <td>Megadott felhasználó kitiltása, megadható indoklás, ideiglenes kitiltás esetén megadható időtartam ami után automatikus unban jár.</td>
-                <td>Tagok kitiltása</td>
-            </tr>
-            <tr>
-                <td>bans</td>
-                <td>&lt@felhasználó&gt</td>
-                <td>Megadott felhasználó korábbi kitiltásai.</td>
-                <td>Tagok kitiltása</td>
-            </tr>
-            <tr>
-                <td>clear [c;purge]</td>
-                <td>&ltüzenetek száma&gt /csatorna/</td>
-                <td>Megadott számú üzenet (max. 100) törlése a jelenlegi vagy megadott csatornában.</td>
-                <td>Üzenetek kezelése</td>
-            </tr>
-            <tr>
-                <td>kick [k]</td>
-                <td>&lt@felhasználó&gt /indok/</td>
-                <td>Megadott felhasználó kirúgása, megadható indoklás.</td>
-                <td>Tagok kirúgása</td>
-            </tr>
-            <tr>
-                <td>kicks [ks]</td>
-                <td>&lt@felhasználó&gt</td>
-                <td>Megadott felhasználó korábbi kirúgásai.</td>
-                <td>Tagok kirúgása</td>
-            </tr>
-            <tr>
-                <td>lockdown [ld]</td>
-                <td>/csatorna/ /időtartam/</td>
-                <td>Jelenlegi vagy megadott csatorna lezárása, akár megadott időre.</td>
-                <td>Csatornák kezelése</td>
-            </tr>
-            <tr>
-                <td>logs</td>
-                <td>&ltmoderáció száma&gt</td>
-                <td>Múltbéli moderációs eljárásra keresés moderációs szám alapján.</td>
-                <td>Tagok felfüggesztése</td>
-            </tr>
-            <tr>
-                <td>removetimeout [rto;unmute;um]</td>
-                <td>&lt@felhasználó&gt /indok/</td>
-                <td>Felfüggesztett felhasználó felfüggesztésének megszűntetése, megadható indoklás.</td>
-                <td>Tagok felfüggesztése</td>
-            </tr>
-            <tr>
-                <td>timeout [to;mute;m]</td>
-                <td>&lt@felhasználó&gt &ltidőtartam&gt /indok/</td>
-                <td>Megadott felhasználó felfüggesztése megadott ideig, megadható indoklás.</td>
-                <td>Tagok felfüggesztése</td>
-            </tr>
-            <tr>
-                <td>timeouts [ts;mutes;ms]</td>
-                <td>&lt@felhasználó&gt</td>
-                <td>Megadott felhasználó korábbi felfüggesztései.</td>
-                <td>Tagok felfüggesztése</td>
-            </tr>
-            <tr>
-                <td>unban [ub]</td>
-                <td>&ltfelhasználóID&gt /indok/</td>
-                <td>Kitiltott felhasználó kitiltásának megszűntetése, megadható indoklás.</td>
-                <td>Tagok kitiltása</td>
-            </tr>
-            <tr>
-                <td>unlockdown [uld]</td>
-                <td>/csatorna/</td>
-                <td>Jelenlegi vagy megadott (lezárt) csatorna megnyitása.</td>
-                <td>Csatornák kezelése</td>
-            </tr>
-            <tr>
-                <td>warn [w]</td>
-                <td>&lt@felhasználó&gt &ltindok&gt</td>
-                <td>Megadott felhasználó figyelmeztetése, indokkal.</td>
-                <td>Tagok felfüggesztése</td>
-            </tr>
-            <tr>
-                <td>warns [ws]</td>
-                <td>&lt@felhasználó&gt</td>
-                <td>Megadott felhasználó korábbi figyelmeztetései.</td>
-                <td>Tagok felfüggesztése</td>
-            </tr>
-          </table>
+    
+        <div id="Parancsok" class="tabcontent">
+            <input type="text" id="pInput" onkeyup="searchFunction()" placeholder="Parancs keresése...">
+            <button type="button" class="collapsible">Zenelejátszás</button>
+            <div class="content">
+                <table class="parancsok" id="parancsok">
+                    <tr>
+                        <td class="title command">Parancs</td>
+                        <td class="title usage">Használat</td>
+                        <td class="title description">Leírás</td>
+                        <td class="title required">Szükséges</td>
+                    </tr>
+                    <tr>
+                        <td>autoplay [ap]</td>
+                        <td>-</td>
+                        <td>Automatikus lejátszási be-, és kikapcsolása a lejátszási sorban lévő zenék alapján.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>clearqueue [cq]</td>
+                        <td>-<amongr></td>
+                        <td>Soron következő összes zene törlése a lejátszási sorból.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>djrole [dr]</td>
+                        <td>/rangID/név/"kikapcsolás"/</td>
+                        <td>DJ rang követelmény beállítása a kívánt rang nevének megadása után, vagy be- és kikapcsolás.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>filter [f]</td>
+                        <td>&ltfilter neve/"kikapcsolás"&gt</td>
+                        <td>Választható hangfilterek hozzáadása a zenékhez.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>loop [l]</td>
+                        <td>/"be"/"queue"/"ki"/</td>
+                        <td>Ismétlés beállítása a jelenlegi zenére, lejátszási sorra, vagy ennek kikapcsolása.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>lyrics [ly]</td>
+                        <td>/zene/</td>
+                        <td>Jelenleg lejátszott vagy megadott zene szövegének megnézése.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>most</td>
+                        <td>-</td>
+                        <td>Különböző információk a jelenleg lejátszott zenéről, és annak irányítása.</td>
+                        <td>Hang csatlakozás*</td>
+                    </tr>
+                    <tr>
+                        <td>pause [pa]</td>
+                        <td>-</td>
+                        <td>Jelenleg lejátszott zene megállítása a lejátszási sor törlése nélkül.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>play [p;join]</td>
+                        <td>/zene név/link/playlist/album link/</td>
+                        <td>Zene nevének/linkjének vagy playlist/album linkjének beírása után megadott zene lejátszása, több száz oldalról.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>previous [back;prev]</td>
+                        <td>-</td>
+                        <td>Előző zenék lejátszása, ha vannak.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>queue [q]</td>
+                        <td>-</td>
+                        <td>A lejátszási sorban lévő zenék megnézése, annak törlése és egyéb műveletek végrehajtása.</td>
+                        <td>Hang csatlakozás*</td>
+                    </tr>
+                    <tr>
+                        <td>queueinfo [qi]</td>
+                        <td>-</td>
+                        <td>Különböző információk a jelenlegi lejátszási beállításokról.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>remove [rem]</td>
+                        <td>&ltzene száma&gt</td>
+                        <td>Zene sorszámának beírása után annak törlése a lejátszási sorból.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>resume [re]</td>
+                        <td>-</td>
+                        <td>Megállított zene lejátszásának folytatása.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>search</td>
+                        <td>/zene neve/</td>
+                        <td>Zene keresése, majd választott zene lejátszása.</td>
+                        <td>Hang csatlakozás*</td>
+                    </tr>
+                    <tr>
+                        <td>seek</td>
+                        <td>&ltmásodperc&gt</td>
+                        <td>Megadott másodperchez való ugrás a jelenleg lejátszott zenében.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>shuffle [sh]</td>
+                        <td>-</td>
+                        <td>A lejátszási sorban lévő zenék lejátszási sorrendjének megkeverése.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>skip [next;n;sk]</td>
+                        <td>/zenék száma/</td>
+                        <td>Ugrás a következő zenére, vagy megadott számú zene átugrása.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>stop [st;leave]</td>
+                        <td>-</td>
+                        <td>Zene lejátszásának leállítása, lejátszási sor törlése és kilépés a voice channelből.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>volume [v]</td>
+                        <td>&lthangerő&gt</td>
+                        <td>Zene hangerejének változtatása maximum 250-ig.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
+                        <td>zenecsatorna [zcs]</td>
+                        <td>/csatorna/</td>
+                        <td>Zene parancsok beállítása, hogy csak a megadott csatornában legyenek használhatóak.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible">Moderáció</button>
+            <div class="content">
+                <table class="parancsok">
+                    <tr>
+                        <td class="title command">Parancs</td>
+                        <td class="title usage">Használat</td>
+                        <td class="title description">Leírás</td>
+                        <td class="title required">Szükséges</td>
+                    </tr>
+                    <tr>
+                        <td>ban [b]</td>
+                        <td>&lt@felhasználó&gt /időtartam/ /indok/</td>
+                        <td>Megadott felhasználó kitiltása, megadható indoklás, ideiglenes kitiltás esetén megadható időtartam ami után automatikus unban jár.</td>
+                        <td>Tagok kitiltása</td>
+                    </tr>
+                    <tr>
+                        <td>bans</td>
+                        <td>&lt@felhasználó&gt</td>
+                        <td>Megadott felhasználó korábbi kitiltásai.</td>
+                        <td>Tagok kitiltása</td>
+                    </tr>
+                    <tr>
+                        <td>clear [c;purge]</td>
+                        <td>&ltüzenetek száma&gt /csatorna/</td>
+                        <td>Megadott számú üzenet (max. 100) törlése a jelenlegi vagy megadott csatornában.</td>
+                        <td>Üzenetek kezelése</td>
+                    </tr>
+                    <tr>
+                        <td>kick [k]</td>
+                        <td>&lt@felhasználó&gt /indok/</td>
+                        <td>Megadott felhasználó kirúgása, megadható indoklás.</td>
+                        <td>Tagok kirúgása</td>
+                    </tr>
+                    <tr>
+                        <td>kicks [ks]</td>
+                        <td>&lt@felhasználó&gt</td>
+                        <td>Megadott felhasználó korábbi kirúgásai.</td>
+                        <td>Tagok kirúgása</td>
+                    </tr>
+                    <tr>
+                        <td>lockdown [ld]</td>
+                        <td>/csatorna/ /időtartam/</td>
+                        <td>Jelenlegi vagy megadott csatorna lezárása, akár megadott időre.</td>
+                        <td>Csatornák kezelése</td>
+                    </tr>
+                    <tr>
+                        <td>logs</td>
+                        <td>&ltmoderáció száma&gt</td>
+                        <td>Múltbéli moderációs eljárásra keresés moderációs szám alapján.</td>
+                        <td>Tagok felfüggesztése</td>
+                    </tr>
+                    <tr>
+                        <td>removetimeout [rto;unmute;um]</td>
+                        <td>&lt@felhasználó&gt /indok/</td>
+                        <td>Felfüggesztett felhasználó felfüggesztésének megszűntetése, megadható indoklás.</td>
+                        <td>Tagok felfüggesztése</td>
+                    </tr>
+                    <tr>
+                        <td>timeout [to;mute;m]</td>
+                        <td>&lt@felhasználó&gt &ltidőtartam&gt /indok/</td>
+                        <td>Megadott felhasználó felfüggesztése megadott ideig, megadható indoklás.</td>
+                        <td>Tagok felfüggesztése</td>
+                    </tr>
+                    <tr>
+                        <td>timeouts [ts;mutes;ms]</td>
+                        <td>&lt@felhasználó&gt</td>
+                        <td>Megadott felhasználó korábbi felfüggesztései.</td>
+                        <td>Tagok felfüggesztése</td>
+                    </tr>
+                    <tr>
+                        <td>unban [ub]</td>
+                        <td>&ltfelhasználóID&gt /indok/</td>
+                        <td>Kitiltott felhasználó kitiltásának megszűntetése, megadható indoklás.</td>
+                        <td>Tagok kitiltása</td>
+                    </tr>
+                    <tr>
+                        <td>unlockdown [uld]</td>
+                        <td>/csatorna/</td>
+                        <td>Jelenlegi vagy megadott (lezárt) csatorna megnyitása.</td>
+                        <td>Csatornák kezelése</td>
+                    </tr>
+                    <tr>
+                        <td>warn [w]</td>
+                        <td>&lt@felhasználó&gt &ltindok&gt</td>
+                        <td>Megadott felhasználó figyelmeztetése, indokkal.</td>
+                        <td>Tagok felfüggesztése</td>
+                    </tr>
+                    <tr>
+                        <td>warns [ws]</td>
+                        <td>&lt@felhasználó&gt</td>
+                        <td>Megadott felhasználó korábbi figyelmeztetései.</td>
+                        <td>Tagok felfüggesztése</td>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible">Konfigurálás</button>
+            <div class="content">
+                <table class="parancsok">
+                    <tr>
+                        <td class="title command">Parancs</td>
+                        <td class="title usage">Használat</td>
+                        <td class="title description">Leírás</td>
+                        <td class="title required">Szükséges</td>
+                    </tr>
+                    <tr>
+                        <td>alias [al]</td>
+                        <td>&ltparancs&gt /új név/</td>
+                        <td>Egyedi nevek beállítása (max. 5) beépített (prefixxel működő) parancsokhoz.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>autoroles [ar]</td>
+                        <td>/@rang/rangID/rang név/</td>
+                        <td>Rangok beállítása, amiket az újonnan csatlakozott felhasználók automatikusan megkapnak.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>customcommand [cc]</td>
+                        <td>&ltparancs neve&gt /válasz/</td>
+                        <td>Parancs nevének és szövegének megadása után egyedi parancs létrehozása/szerkesztése/törlése (max. 50).</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>farewell</td>
+                        <td>/csatorna/ /üzenet/</td>
+                        <td>Egyedi búcsú üzenet beállítása, amit tagok kilépésekor a megadott csatornába kiír sasOS.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>membercounter [mc]</td>
+                        <td>&ltcsatorna (új) neve&gt</td>
+                        <td>Egyedi név megadása után felhasználó számláló csatorna létrehozása, vagy beállított csatorna nevének frissítése.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>modlog</td>
+                        <td>/csatorna/</td>
+                        <td>sasOS által végrehajtott moderálások megadott csatornába való küldése.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>permissions [perms]</td>
+                        <td>/parancs/ /@rang/rangID/név/</td>
+                        <td>Parancsok egyedi ranghoz való kötése az alapértelmezett jogosultság helyett (kivéve Setup parancsok).</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>prefix</td>
+                        <td>/új prefix/</td>
+                        <td>Parancsok előjelének megváltoztatása 5 karakterig (max. 3), visszaállítása vagy jelenlegi(ek) megnézése.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>slowmode [sm]</td>
+                        <td>/csatorna/ &ltidő&gt</td>
+                        <td>Lassított mód bekapcsolása jelenlegi vagy megadott csatornára, megadott időre.</td>
+                        <td>Csatornák kezelése</td>
+                    </tr>
+                    <tr>
+                        <td>toggle [t]</td>
+                        <td>/parancs/</td>
+                        <td>Parancs nevének beírása után annak be-, vagy kikapcsolása a szerveren, vagy kikapcsolt parancsok megnézése.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>welcome</td>
+                        <td>/csatorna/ /üzenet/</td>
+                        <td>Egyedi üdvözlő üzenet beállítása, amit új tagok csatlakozásakor a megadott csatornába kiír sasOS.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible">Egyéb</button>
+            <div class="content">
+                <table class="parancsok">
+                    <tr>
+                        <td class="title command">Parancs</td>
+                        <td class="title usage">Használat</td>
+                        <td class="title description">Leírás</td>
+                        <td class="title required">Szükséges</td>
+                    </tr>
+                    <tr>
+                        <td>activities [ac]</td>
+                        <td>/aktivitás/</td>
+                        <td>Aktivitás kiválasztása, majd a kapott linkre való kattintás a válaszott aktivitás elindítása.</td>
+                        <td>Hang csatlakozás, Nitro*</td>
+                    </tr>
+                    <tr>
+                        <td>ascii</td>
+                        <td>&ltszöveg&gt</td>
+                        <td>Beírt szöveg ASCII-képpé szerkesztése, beépített parancs használata esetén megadhatóak betűtípusok: https://pastebin.com/AVsvB8Ju.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>avatár [a]</td>
+                        <td>/@felhasználó/formátum/</td>
+                        <td>Saját, vagy megadott felhasználó profilképének megnézése kiválasztható formátumban és felbontásban.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>coinflip [cf]</td>
+                        <td>-</td>
+                        <td>Klasszikus fej vagy írás komplex matematikai számításokkal.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>emojify</td>
+                        <td>&ltszöveg&gt</td>
+                        <td>Választott szöveg beírása, majd emoji-szöveggé alakítása.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>kőpapírolló [kpo;rps]</td>
+                        <td>&lt"kő"/"papír"/"olló"&gt</td>
+                        <td>Hagyományos kő-papír-olló sasOS ellen!</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>miatyánk</td>
+                        <td>-</td>
+                        <td>Ha valamilyen bűnt hordozol magadon, ez a parancs segít(het).</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>nekosbest [nb]</td>
+                        <td>&lttípus&gt</td>
+                        <td>Nekos.best API segítségével kategória kiválasztása után anime gifek/képek küldése.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>nem</td>
+                        <td>/@felhasználó/</td>
+                        <td>Ha úgy érzed, valakit nem kérdeztek.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>randomkép [rk]</td>
+                        <td>-</td>
+                        <td>Random képek a prnt.sc-ről, néha sikertelenül. (Csak NSFW csatornákban használható)</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>randomszám [rsz]</td>
+                        <td>&ltminimum&gt &ltmaximum&gt</td>
+                        <td>Intervallum megadása után véletlenszerű szám választása az értékek között.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>replace [rep]</td>
+                        <td>&ltkicserélendő karakter&gt &ltúj karakter&gt &ltszöveg&gt</td>
+                        <td>Karakterek kicserélése egy másikra a megadott szövegben. Szóköz: \\s</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>sadstory</td>
+                        <td>-</td>
+                        <td>Sírni emberi dolog, bár a történet mégsem olyan szomorú?</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>say</td>
+                        <td>/csatorna/ &ltszöveg&gt</td>
+                        <td>Választott szöveg (és címzett csatorna) beírása, majd ezen szöveg elküldése sasOS által.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>serverinfo [si]</td>
+                        <td>-</td>
+                        <td>Tagok száma, emojik, rangok, kikapcsolt parancsok és egyéb információk a szerverről.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>szavazás</td>
+                        <td>/időtartam(m)/ &ltkérdés&gt</td>
+                        <td>Feltett kérdés megszavaztatása, majd az eredmény közlése 5 perc elteltével, vagy megadott idő után (max. 30 perc).</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>szóharc [szh]</td>
+                        <td>&ltszó&gt</td>
+                        <td>Állítsd csatába legerősebb szavadat, és derüljön ki, kinek jobb a szava!</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>szókeresés [szk]</td>
+                        <td>&ltkezdőbetűk&gt</td>
+                        <td>Magyar szavak keresése néhány kezdőbetű megadásával.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>userinfo [ui]</td>
+                        <td>/@felhasználó/</td>
+                        <td>Információk kiírása magadról vagy megadott felhasználóról.</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible">sasOS</button>
+            <div class="content">
+                <table class="parancsok">
+                    <tr>
+                        <td class="title command">Parancs</td>
+                        <td class="title usage">Használat</td>
+                        <td class="title description">Leírás</td>
+                        <td class="title required">Szükséges</td>
+                    </tr>
+                    <tr>
+                        <td>changelog [cl]</td>
+                        <td>/verziószám/</td>
+                        <td>A jelenlegi, vagy választott verzió részletes változáslistája.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>feedback [fb]</td>
+                        <td>-</td>
+                        <td>Hibák jelentése, új funckiók ajánlása vagy személyes tapasztalatok jelentése a fejlesztőnek.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>help [h]</td>
+                        <td>/parancs/</td>
+                        <td>Minden használható parancs és egyedi parancsok kijelzése vagy bővebb ismertetés megadott parancsokhoz.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>info [i]</td>
+                        <td>-</td>
+                        <td>Rövid leírás sasOS-ről, segítség a parancsok eléréséhez és elérhetőségek elérése.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>status [ping]</td>
+                        <td>-</td>
+                        <td>Válaszidők, jelenlegi uptime és szerverek számának kiírása.</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+            <table class="legend">
+                <tr>
+                    <td class="column1">"&ltx&gt"</td>
+                    <td>Kötelező megadni</td>
+                </tr>
+                <tr>
+                    <td>"/x/"</td>
+                    <td>Nem kötelező megadni</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Csak egyes funkciókhoz</td>
+                </tr>
+            </table>
         </div>
-        <button type="button" class="collapsible">Konfigurálás</button>
-        <div class="content">
-          <table class="parancsok">
+    
+        <script type="text/javascript" src="./index.js"></script>
+    </header>
+    <article></article>
+    <footer>
+        <hr>
+        <table class="footer feature">
             <tr>
-                <td class="title command">Parancs</td>
-                <td class="title usage">Használat</td>
-                <td class="title description">Leírás</td>
-                <td class="title required">Szükséges</td>
+                <td class="felsorol">
+                    <img class="icon" onclick="document.getElementById('defaultOpen').click();topFunction()"
+                        src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
+                        title="Vissza a főoldalra" alt="Vissza a főoldalra"></td>
             </tr>
             <tr>
-                <td>alias [al]</td>
-                <td>&ltparancs&gt /új név/</td>
-                <td>Egyedi nevek beállítása (max. 5) beépített (prefixxel működő) parancsokhoz.</td>
-                <td>Adminisztrátor</td>
+                <td class="felsorol">Rendszeres frissítések, új funkciók és fejlesztések | <p>Changelog</p></td>
             </tr>
             <tr>
-                <td>autoroles [ar]</td>
-                <td>/@rang/rangID/rang név/</td>
-                <td>Rangok beállítása, amiket az újonnan csatlakozott felhasználók automatikusan megkapnak.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>customcommand [cc]</td>
-                <td>&ltparancs neve&gt /válasz/</td>
-                <td>Parancs nevének és szövegének megadása után egyedi parancs létrehozása/szerkesztése/törlése (max. 50).</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>farewell</td>
-                <td>/csatorna/ /üzenet/</td>
-                <td>Egyedi búcsú üzenet beállítása, amit tagok kilépésekor a megadott csatornába kiír sasOS.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>membercounter [mc]</td>
-                <td>&ltcsatorna (új) neve&gt</td>
-                <td>Egyedi név megadása után felhasználó számláló csatorna létrehozása, vagy beállított csatorna nevének frissítése.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>modlog</td>
-                <td>/csatorna/</td>
-                <td>sasOS által végrehajtott moderálások megadott csatornába való küldése.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>permissions [perms]</td>
-                <td>/parancs/ /@rang/rangID/név/</td>
-                <td>Parancsok egyedi ranghoz való kötése az alapértelmezett jogosultság helyett (kivéve Setup parancsok).</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>prefix</td>
-                <td>/új prefix/</td>
-                <td>Parancsok előjelének megváltoztatása 5 karakterig (max. 3), visszaállítása vagy jelenlegi(ek) megnézése.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>slowmode [sm]</td>
-                <td>/csatorna/ &ltidő&gt</td>
-                <td>Lassított mód bekapcsolása jelenlegi vagy megadott csatornára, megadott időre.</td>
-                <td>Csatornák kezelése</td>
-            </tr>
-            <tr>
-                <td>toggle [t]</td>
-                <td>/parancs/</td>
-                <td>Parancs nevének beírása után annak be-, vagy kikapcsolása a szerveren, vagy kikapcsolt parancsok megnézése.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-            <tr>
-                <td>welcome</td>
-                <td>/csatorna/ /üzenet/</td>
-                <td>Egyedi üdvözlő üzenet beállítása, amit új tagok csatlakozásakor a megadott csatornába kiír sasOS.</td>
-                <td>Adminisztrátor</td>
-            </tr>
-          </table>
-        </div>
-        <button type="button" class="collapsible">Egyéb</button>
-        <div class="content">
-          <table class="parancsok">
-            <tr>
-                <td class="title command">Parancs</td>
-                <td class="title usage">Használat</td>
-                <td class="title description">Leírás</td>
-                <td class="title required">Szükséges</td>
-            </tr>
-            <tr>
-                <td>activities [ac]</td>
-                <td>/aktivitás/</td>
-                <td>Aktivitás kiválasztása, majd a kapott linkre való kattintás a válaszott aktivitás elindítása.</td>
-                <td>Hang csatlakozás, Nitro*</td>
-            </tr>
-            <tr>
-                <td>ascii</td>
-                <td>&ltszöveg&gt</td>
-                <td>Beírt szöveg ASCII-képpé szerkesztése, beépített parancs használata esetén megadhatóak betűtípusok: https://pastebin.com/AVsvB8Ju.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>avatár [a]</td>
-                <td>/@felhasználó/formátum/</td>
-                <td>Saját, vagy megadott felhasználó profilképének megnézése kiválasztható formátumban és felbontásban.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>coinflip [cf]</td>
-                <td>-</td>
-                <td>Klasszikus fej vagy írás komplex matematikai számításokkal.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>emojify</td>
-                <td>&ltszöveg&gt</td>
-                <td>Választott szöveg beírása, majd emoji-szöveggé alakítása.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>kőpapírolló [kpo;rps]</td>
-                <td>&lt"kő"/"papír"/"olló"&gt</td>
-                <td>Hagyományos kő-papír-olló sasOS ellen!</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>miatyánk</td>
-                <td>-</td>
-                <td>Ha valamilyen bűnt hordozol magadon, ez a parancs segít(het).</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>nekosbest [nb]</td>
-                <td>&lttípus&gt</td>
-                <td>Nekos.best API segítségével kategória kiválasztása után anime gifek/képek küldése.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>nem</td>
-                <td>/@felhasználó/</td>
-                <td>Ha úgy érzed, valakit nem kérdeztek.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>randomkép [rk]</td>
-                <td>-</td>
-                <td>Random képek a prnt.sc-ről, néha sikertelenül. (Csak NSFW csatornákban használható)</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>randomszám [rsz]</td>
-                <td>&ltminimum&gt &ltmaximum&gt</td>
-                <td>Intervallum megadása után véletlenszerű szám választása az értékek között.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>replace [rep]</td>
-                <td>&ltkicserélendő karakter&gt &ltúj karakter&gt &ltszöveg&gt</td>
-                <td>Karakterek kicserélése egy másikra a megadott szövegben. Szóköz: \\s</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>sadstory</td>
-                <td>-</td>
-                <td>Sírni emberi dolog, bár a történet mégsem olyan szomorú?</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>say</td>
-                <td>/csatorna/ &ltszöveg&gt</td>
-                <td>Választott szöveg (és címzett csatorna) beírása, majd ezen szöveg elküldése sasOS által.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>serverinfo [si]</td>
-                <td>-</td>
-                <td>Tagok száma, emojik, rangok, kikapcsolt parancsok és egyéb információk a szerverről.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>szavazás</td>
-                <td>/időtartam(m)/ &ltkérdés&gt</td>
-                <td>Feltett kérdés megszavaztatása, majd az eredmény közlése 5 perc elteltével, vagy megadott idő után (max. 30 perc).</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>szóharc [szh]</td>
-                <td>&ltszó&gt</td>
-                <td>Állítsd csatába legerősebb szavadat, és derüljön ki, kinek jobb a szava!</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>szókeresés [szk]</td>
-                <td>&ltkezdőbetűk&gt</td>
-                <td>Magyar szavak keresése néhány kezdőbetű megadásával.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>userinfo [ui]</td>
-                <td>/@felhasználó/</td>
-                <td>Információk kiírása magadról vagy megadott felhasználóról.</td>
-                <td>-</td>
-            </tr>
-          </table>
-        </div>
-        <button type="button" class="collapsible">sasOS</button>
-        <div class="content">
-          <table class="parancsok">
-            <tr>
-                <td class="title command">Parancs</td>
-                <td class="title usage">Használat</td>
-                <td class="title description">Leírás</td>
-                <td class="title required">Szükséges</td>
-            </tr>
-            <tr>
-                <td>changelog [cl]</td>
-                <td>/verziószám/</td>
-                <td>A jelenlegi, vagy választott verzió részletes változáslistája.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>feedback [fb]</td>
-                <td>-</td>
-                <td>Hibák jelentése, új funckiók ajánlása vagy személyes tapasztalatok jelentése a fejlesztőnek.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>help [h]</td>
-                <td>/parancs/</td>
-                <td>Minden használható parancs és egyedi parancsok kijelzése vagy bővebb ismertetés megadott parancsokhoz.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>info [i]</td>
-                <td>-</td>
-                <td>Rövid leírás sasOS-ről, segítség a parancsok eléréséhez és elérhetőségek elérése.</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>status [ping]</td>
-                <td>-</td>
-                <td>Válaszidők, jelenlegi uptime és szerverek számának kiírása.</td>
-                <td>-</td>
-            </tr>
-          </table>
-        </div>
-        <table class="legend">
-            <tr>
-                <td class="column1">"&ltx&gt"</td>
-                <td>Kötelező megadni</td>
-            </tr>
-            <tr>
-                <td>"/x/"</td>
-                <td>Nem kötelező megadni</td>
-            </tr>
-            <tr>
-                <td>*</td>
-                <td>Csak egyes funkciókhoz</td>
+                <td class="felsorol">
+                    <p>
+                        <a href="https://discord.gg/s8XtzBasQF" target="_blank">Support Szerver</a> |
+                        <a href="https://github.com/sassvagyok/sasOS-docs" target="_blank">Github</a> |
+                    </p>
+                    <p class="verzio" id="message">...</p>
+                </td>
             </tr>
         </table>
-    </div>
-
-    <script type="text/javascript" src="./index.js"></script>
+    </footer>
 </body>
-<footer>
-    <hr>
-    <table class="footer feature">
-        <tr>
-            <td class="felsorol">
-                <img class="icon" onclick="document.getElementById('defaultOpen').click();topFunction()"
-                    src="https://cdn.discordapp.com/attachments/1000529467262914600/1048656664997400687/011a7bc2fcfc7cc84e21067c32f5b894.png"
-                    title="Vissza a főoldalra" alt="Vissza a főoldalra">
-            </td>
-        </tr>
-        <tr>
-            <td class="felsorol">
-                Rendszeres frissítések, új funkciók és fejlesztések | <p>Changelog</p>
-            </td>
-        </tr>
-        <tr>
-            <td class="felsorol">
-                <p>
-                    <a href="https://discord.gg/s8XtzBasQF" target="_blank">Support Szerver</a> |
-                    <a href="https://github.com/sassvagyok/sasOS-docs" target="_blank">Github</a> |
-                </p>
-                <p class="verzio" id="message">...</p>
-            </td>
-        </tr>
-    </table>
-</footer>
-
 </html>

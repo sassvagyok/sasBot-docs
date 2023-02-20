@@ -2,22 +2,26 @@
 
 html {
     scroll-behavior: smooth;
-    position: relative;
-    min-height: 100%;
 }
 
 body {
     background-image: linear-gradient(to top, #202020, #0f212e);
     display: flex;
     flex-direction: column;
-    margin: 0 0 100px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    min-height: 50px;
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    min-height: 50px;
+}
+
+article {
+    flex: 1;
 }
 
 th {
