@@ -72,6 +72,7 @@ function searchFunction() {
             if (td) {
               txtValue = td.textContent || td.innerText;
               if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[0].style.display = "";
                 tr[i].style.display = "";
               } else {
                 tr[i].style.display = "none";
