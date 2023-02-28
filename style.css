@@ -162,6 +162,7 @@ button.tablinks {
     color: #e6eff3;
     border-radius: 10px;
     margin-right: 10px;
+    line-height: 25px;
 }
 
 button.invite {
@@ -239,10 +240,12 @@ button.invite {
 
 .collapsible:hover {
     font-size: 25px;
+    background-color: #39393a;
 }
 
 .collapsible.active {
     font-size: 25px;
+    background-color: #39393a;
 }
 
 .content {
