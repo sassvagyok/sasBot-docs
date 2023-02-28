@@ -53,7 +53,6 @@ function searchFunction() {
   filter = input.value.toUpperCase();
 
   for (i = 0; i < coll.length; i++) {
-    coll[i].classList.toggle("active");
       var content = coll[i].nextElementSibling;
       if(filter.length > 0){
         content.style.display = "block";
@@ -67,18 +66,20 @@ function searchFunction() {
   tables.forEach(function(table) {
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
-        if (!tr[i].classList.contains('header')) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-              txtValue = td.textContent || td.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[0].style.display = "";
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
-              }
-            }
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          if(i === 0){
+            tr[i].style.display = "none";
+          } else {
+            tr[0].style.display = "";
+            tr[i].style.display = "";
           }
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
     }
 }); 
 }

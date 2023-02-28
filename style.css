@@ -143,7 +143,7 @@ p.verzio {
 
 .tab {
     position: sticky;
-    top: 10px;
+    top: 13px;
     overflow: hidden;
     margin-right: auto;
     margin-left: auto;
@@ -154,7 +154,7 @@ button.tablinks {
     float: right;
     border: none;
     cursor: pointer;
-    padding: 10px 13px;
+    padding: 10px 10px;
     transition: 0.2s;
     font-family: 'Alexandria', sans-serif;
     font-weight: 500;
@@ -162,7 +162,6 @@ button.tablinks {
     color: #e6eff3;
     border-radius: 10px;
     margin-right: 10px;
-    margin-top: 5px;
 }
 
 button.invite {
@@ -219,27 +218,31 @@ button.invite {
     color: #e6eff3;
     cursor: pointer;
     padding: 15px;
-    width: 300px;
+    width: 280px;
+    line-height: 30px;
     border: none;
     text-align: middle;
     outline: none;
     display: block;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
     font-family: 'Alexandria', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 23px;
     border-radius: 12px;
     transition: 0.2s;
 }
 
 .first {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .collapsible:hover {
-    background-color: #39393a;
+    font-size: 25px;
+}
+
+.collapsible.active {
+    font-size: 25px;
 }
 
 .content {
@@ -251,6 +254,7 @@ table.parancsok {
     background-color: #141414;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     border-radius: 13px;
     border-spacing: 0;
     table-layout: fixed;
@@ -265,6 +269,7 @@ table.parancsok td {
     line-height: 150%;
     font-size: 15px;
 }
+
 td.title {
     background-color: #0c0c0c;
     font-size: 18px;
@@ -297,30 +302,19 @@ td.required {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     border: 0;
     border-radius: 8px;
     padding: 10px;
     outline: none;
     transition: width 0.2s ease-in-out;
-    width: 230px;
+    width: 170px;
 }
 
 #pInput:focus {
     border: none;
-    width: 430px;
-    background-color: #1d1d1d;
-}
-
-.pInput {
-    background-color: #0f0f0f;
-    font-size: 100px;
-    font-weight: 400;
-    color: #e6eff3;
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
+    width: 300px;
+    background-color: #303030;
 }
 
 table.legend {
@@ -332,7 +326,7 @@ table.legend {
     border: 1px solid #222222;
     border-spacing: 0;
     table-layout: fixed;
-    width: 310px;
+    width: 300px;
     overflow: hidden;
     margin-top: 75px;
     margin-bottom: 0;
@@ -342,8 +336,8 @@ table.legend td {
     text-align: middle;
     padding-left: 10px;
     border: 1px solid #222222;
-    line-height: 80%;
-    font-size: 15px;
+    line-height: 85%;
+    font-size: 13px;
 }
 
 td.column1 {
