@@ -42,7 +42,7 @@ img.gif {
 }
 
 img.icon {
-    width: 12%;
+    width: 14%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -111,6 +111,13 @@ td.felsorol {
     font-weight: 300;
 }
 
+td.footer {
+    font-size: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-weight: 300;
+}
+
 td.parancs {
     font-size: 15px;
     padding-bottom: 2px;
@@ -129,6 +136,7 @@ td.utolso {
 td.verzio {
     padding-top: 0px;
     padding-bottom: 10px;
+    font-size: 15px;
 }
 
 p {
