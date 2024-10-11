@@ -159,12 +159,6 @@
                         <td>Hang csatlakozás</td>
                     </tr>
                     <tr>
-                        <td>djrole [dr]</td>
-                        <td>/rangID/név/"kikapcsolás"/</td>
-                        <td>DJ rang követelmény beállítása a kívánt rang nevének megadása után, vagy be- és kikapcsolás.</td>
-                        <td>Adminisztrátor</td>
-                    </tr>
-                    <tr>
                         <td>filter [f]</td>
                         <td>&ltfilter neve/"kikapcsolás"&gt</td>
                         <td>Választható hangfilterek hozzáadása a zenékhez.</td>
@@ -225,6 +219,12 @@
                         <td>Hang csatlakozás</td>
                     </tr>
                     <tr>
+                        <td>restart</td>
+                        <td>-</td>
+                        <td>Jelenleg lejátszott zene újraindítása.</td>
+                        <td>Hang csatlakozás</td>
+                    </tr>
+                    <tr>
                         <td>resume [re]</td>
                         <td>-</td>
                         <td>Megállított zene lejátszásának folytatása.</td>
@@ -265,12 +265,6 @@
                         <td>&lthangerő&gt</td>
                         <td>Zene hangerejének változtatása maximum 250-ig.</td>
                         <td>Hang csatlakozás</td>
-                    </tr>
-                    <tr>
-                        <td>zenecsatorna [zcs]</td>
-                        <td>/csatorna/</td>
-                        <td>Zene parancsok beállítása, hogy csak a megadott csatornában legyenek használhatóak.</td>
-                        <td>Adminisztrátor</td>
                     </tr>
                 </table>
             </div>
@@ -320,9 +314,9 @@
                         <td>Csatornák kezelése</td>
                     </tr>
                     <tr>
-                        <td>logs</td>
-                        <td>&ltmoderáció száma&gt</td>
-                        <td>Múltbéli moderációs eljárásra keresés moderációs szám alapján.</td>
+                        <td>moderations</td>
+                        <td>&ltmoderáció száma&gt/&ltfelhasználó&gt</td>
+                        <td>Múltbéli moderációs eljárásra keresés moderációs szám alapján, vagy megadott felhasználó moderációjainak száma.</td>
                         <td>Tagok felfüggesztése</td>
                     </tr>
                     <tr>
@@ -397,6 +391,12 @@
                         <td>Adminisztrátor</td>
                     </tr>
                     <tr>
+                        <td>djrole [dr]</td>
+                        <td>/rangID/név/"kikapcsolás"/</td>
+                        <td>DJ rang követelmény beállítása a kívánt rang nevének megadása után, vagy be- és kikapcsolás.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
                         <td>farewell</td>
                         <td>/csatorna/ /üzenet/</td>
                         <td>Egyedi búcsúüzenet beállítása, amit tagok kilépésekor a megadott csatornába kiír sasOS.</td>
@@ -448,6 +448,12 @@
                         <td>welcome</td>
                         <td>/csatorna/ /üzenet/</td>
                         <td>Egyedi üdvözlő üzenet beállítása, amit új tagok csatlakozásakor a megadott csatornába kiír sasOS.</td>
+                        <td>Adminisztrátor</td>
+                    </tr>
+                    <tr>
+                        <td>zenecsatorna [zcs]</td>
+                        <td>/csatorna/</td>
+                        <td>Zene parancsok beállítása, hogy csak a megadott csatornában legyenek használhatóak.</td>
                         <td>Adminisztrátor</td>
                     </tr>
                 </table>
@@ -528,7 +534,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>say</td>
+                        <td>echo</td>
                         <td>/csatorna/ &ltszöveg&gt</td>
                         <td>Választott szöveg (és címzett csatorna) beírása, majd ezen szöveg elküldése sasOS által.</td>
                         <td>-</td>
