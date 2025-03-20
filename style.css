@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to top, #06243a, #083453);
+    background-color: #151e31 !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -28,7 +28,7 @@ a:hover {
 }
 
 .navbar {
-    background-color: #00101a !important;
+    background-color: #0b101a !important;
     margin-bottom: 30px !important;
     padding: 10px !important;
 }
@@ -57,7 +57,7 @@ nav ul li a {
     font-size: 115% !important;
     border-radius: 8px;
     background-color: transparent;
-    color: #e7e7e7;
+    color: #aaaaaa !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
     margin: 5px;
@@ -84,13 +84,13 @@ nav ul a.active {
 
 nav ul li a.invite {
     background-image: linear-gradient(to top right, #3ba8ec, #1b79ac);
-    color: #ffffff;
-    box-shadow: 0 0 15px #1f8ac4;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px #1f8ac4;
 }
 nav ul li a.invite:hover {
     background-image: linear-gradient(to top right, #1b79ac, #3ba8ec);
     color: #ffffff;
-    box-shadow: 0 0 15px #3ba8ec;
+    box-shadow: 0 0 12px #3ba8ec;
 }
 
 .nav-icon {
@@ -169,10 +169,6 @@ h3 {
     text-align: center;
 }
 
-p {
-    text-align: center;
-}
-
 p.command-showcase {
     color: #ffffff !important;
     font-size: 15px !important;
@@ -197,11 +193,21 @@ footer {
     padding-top: 12px;
     margin-top: auto;
     padding-bottom: 0;
-    background-color: #00101a;
+    background-color: #0b101a;
+}
+
+p {
+    text-align: center;
+}
+
+#version {
+    color: #e7e7e7;
+    margin-bottom: 10px;
 }
 
 p.footer-links {
     color: #e6eff3;
+    margin-bottom: 5px;
 }
 
 #pInput {
@@ -218,22 +224,40 @@ p.footer-links {
     border-radius: 8px;
     padding: 10px;
     outline: none;
-    width: 200px;
+    width: 30%;
     text-align: center;
-}
-
-#pInput:focus {
-    border: none;
 }
 
 table.commands {
     border-spacing: 0;
     table-layout: auto;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 60%;
     border-collapse: separate;
     border-radius: 15px;
     overflow: hidden;
+    margin-bottom: 40px;
+}
+
+table.legend {
+    background-color: #141414;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    table-layout: fixed;
+    min-width: 250px;
+    width: 30%;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+table.legend td, table.legend th {
+    font-size: 15px !important;
+}
+
+caption {
+    margin-top: 9px;
+    color: #e6eff3 !important;
 }
 
 th {
@@ -245,6 +269,7 @@ th {
     font-size: 18px !important;
     font-weight: 500 !important;
     text-align: center !important;
+    vertical-align: middle;
 }
 
 td {
@@ -280,10 +305,6 @@ th.required-column {
     width: 20%;
     background-color: #000000 !important;
     border: 1px solid #222222 !important;
-}
-
-.command-table {
-    margin-bottom: 50px;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td {

@@ -20,3 +20,10 @@ function searchFunction() {
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded", async function () {
+    const fetchVersion = await fetch("https://api.github.com/repos/sassvagyok/sasOS-docs/commits/main");
+    const fetchedVersionJson = await fetchVersion.json();
+
+    document.getElementById("version").innerHTML = fetchedVersionJson.commit.message.indexOf('\n') > -1 ? fetchedVersionJson.commit.message.substring(0, fetchedVersionJson.commit.message.indexOf('\n')) : fetchedVersionJson.commit.message;
+});
