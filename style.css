@@ -146,8 +146,8 @@ hr {
 }
 
 .changelog-showcase {
-    background-image: linear-gradient(to top, #2e2d30, #18181a);
-    box-shadow: 0 0 20px #18181a;
+    background-color: #202020;
+    border: 2px solid #181818;
 }
 
 h1 {
