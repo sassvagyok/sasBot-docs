@@ -65,8 +65,8 @@ function addParameterTooltips() {
 function formatChangelog(text) {
     let formatted = text.replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
     formatted = formatted.replace(/\`([^`]+)\`/g, "<code>$1</code>");
-    formatted = formatted.replace(/^- /gm, "● ");
-    formatted = formatted.replace(/^\s+- /gm, "&nbsp;&nbsp;&nbsp;&nbsp;- ");
+    formatted = formatted.replace(/^- /gm, "&emsp;● ");
+    formatted = formatted.replace(/^\s+- /gm, "&emsp;&emsp;○ ");
     formatted = formatted.replace(/\n/g, "<br>");
     
     return formatted;
