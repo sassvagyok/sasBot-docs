@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-color: #1a294b !important;
+    background-color: #1a2949 !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -27,7 +27,7 @@ a:hover {
 }
 
 .navbar {
-    background-color: #0b101a !important;
+    background-color: #0b111b !important;
     margin-bottom: 30px !important;
     padding: 10px !important;
 }
@@ -145,6 +145,11 @@ hr {
     box-shadow: 0 0 20px #4b0e81;
 }
 
+.changelog-showcase {
+    background-image: linear-gradient(to top, #2e2d30, #18181a);
+    box-shadow: 0 0 20px #18181a;
+}
+
 h1 {
     font-family: 'Alexandria', sans-serif;
     font-weight: 600 !important;
@@ -160,6 +165,16 @@ h2 {
     padding-bottom: 0px;
     color: #e6eff3 !important;
     text-align: center;
+}
+
+h2.changelog {
+    font-size: 150% !important;
+    margin-bottom: 0 !important;
+}
+
+.changelog-showcase hr {
+    height: 2px;
+    margin-top: 10px;
 }
 
 h3 {
@@ -193,15 +208,22 @@ img.gif {
 }
 
 footer {
-    padding-top: 12px;
+    padding-top: 10px;
     margin-top: auto;
     padding-bottom: 0;
-    background-color: #0b101a;
+    background-color: #0b111b;
 }
 
 p {
     font-family: 'Alexandria', sans-serif;
     text-align: center;
+    color: #e6eff3;
+}
+
+p.changelog {
+    font-weight: 300;
+    text-align: left;
+    padding-left: 20px;
 }
 
 #version {
@@ -214,6 +236,7 @@ p.footer-links {
 }
 
 p.footer-links, p#version {
+    font-size: 95%;
     color: #cacecf;
     display: inline-block;
     margin-right: 5px;
@@ -221,7 +244,7 @@ p.footer-links, p#version {
 
 #pInput {
     font-family: 'Alexandria', sans-serif;
-    background-color: #0e1420;
+    background-color: #0b111b;
     font-size: 105%;
     font-weight: 400;
     color: #e6eff3 !important;
@@ -270,19 +293,7 @@ table.commands {
 }
 
 table.legend {
-    border-spacing: 0;
-    table-layout: auto;
-    margin: 0 auto;
-    background-color: #141414;
-    border-collapse: separate;
-    border-radius: 15px;
-    max-width: 70%;
-    overflow: hidden;
     margin-top: 15px;
-}
-
-table.legend td, table.legend th {
-    font-size: 100% !important;
 }
 
 caption {
@@ -358,7 +369,7 @@ td:nth-child(1) {
     }
     
     table.commands {
-        width: 100%;
+        min-width: 80%;
     }
     
     table.commands thead {
