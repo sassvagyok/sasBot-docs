@@ -35,18 +35,19 @@ function addParameterTooltips() {
     
     commandRows.forEach(row => {
         const commandAttr = row.getAttribute("data-command");
-        const commandNames = commandAttr.split(" ");
         const codeElements = row.querySelectorAll("code:not([data-bs-toggle])");
         
         codeElements.forEach(code => {
             const paramName = code.textContent.trim();
+            const paramIndex = code.getAttribute("data-param-index");
             let tooltipText = "";
-            
-            for (let i = 0; i < commandNames.length; i++) {
-                tooltipText = paramTooltip[commandNames[i]]?.[paramName] || "";
-                if (tooltipText) break;
+
+            if (paramIndex) {
+                tooltipText = paramTooltip[commandAttr]?.[`${paramName}_${paramIndex}`] || "";
+            } else {
+                tooltipText = paramTooltip[commandAttr]?.[paramName] || "";
             }
-            
+
             if (tooltipText) {
                 code.setAttribute("data-bs-toggle", "tooltip");
                 code.setAttribute("data-bs-html", "true");
