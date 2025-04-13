@@ -220,11 +220,16 @@ p {
     color: #e6eff3;
 }
 
+p#changelog {
+    margin-bottom: 0px;
+}
+
 p.changelog {
     font-weight: 300;
     font-size: 95%;
     text-align: left;
     padding-left: 15px;
+    margin-bottom: 0px;
 }
 
 #version {
@@ -245,7 +250,8 @@ p.footer-links, p#version {
 
 #pInput {
     font-family: 'Alexandria', sans-serif;
-    background-color: #0b111b;
+    background-color: #202020;
+    border: 2px solid #181818;
     font-size: 105%;
     font-weight: 400;
     color: #e6eff3 !important;
@@ -253,9 +259,8 @@ p.footer-links, p#version {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    border: 0;
     border-radius: 8px;
-    padding: 12px;
+    padding: 10px;
     outline: none;
     width: 210px;
     text-align: center;
@@ -266,7 +271,8 @@ p.footer-links, p#version {
 }
 
 #pInput:focus {
-    background-color: #090e16;
+    background-color: #141414;
+    border: 2px solid #0e0e0e;
 }
 
 code {
@@ -339,6 +345,10 @@ td:nth-child(1) {
 
 .command-column, .required-column {
     width: 25%;
+}
+
+table.legend .command-column, table.legend .required-column {
+    width: 35%;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td {

@@ -52,11 +52,30 @@
                     <details>
                         <summary>Súgó</summary>
                         <table class="table table-hover commands legend">
-                            <tr data-command="example">
-                                <td>parancs<br>● alparancs <code>paraméter1</code> <code class="optional">paraméter2</code></td>
-                                <td>Ez egy példa parancs.</td>
-                                <td>Ez a jogosultság/állapot kell a parancshoz<br><b>*csak egyes funkciókhoz</b></td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="command-column">Parancs</th>
+                                    <th scope="col" class="description-column">Leírás</th>
+                                    <th scope="col" class="required-column">Szükséges</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-command="example">
+                                    <td>parancs <code>paraméter1</code> <code class="optional">paraméter2</code></td>
+                                    <td>Parancs paraméterekkel.</td>
+                                    <td>Jogosultság/állapot, ami kell a parancshoz</td>
+                                </tr>
+                                <tr data-command="example">
+                                    <td>parancs<br>● alparancs</td>
+                                    <td>Parancs alparanccsal.</td>
+                                    <td>Jogosultság/állapot, ami kell a parancshoz</td>
+                                </tr>
+                                <tr data-command="example">
+                                    <td>parancs<br>● csoport<br>&emsp;○ alparancs</td>
+                                    <td>Parancs alparancs csoporttal.</td>
+                                    <td>Jogosultság/állapot, ami kell a parancshoz*<br><b>*csak egyes funkciókhoz</b></td>
+                                </tr>
+                            </tbody>
                         </table>
                     </details>
                 </caption>
