@@ -34,7 +34,8 @@ function addParameterTooltips() {
     const commandRows = document.querySelectorAll("tr[data-command]");
     
     commandRows.forEach(row => {
-        const commandAttr = row.getAttribute("data-command");
+        // Split data-command by space, e.g. "8ball generic" => ["8ball", "generic"]
+        const commandAttrs = row.getAttribute("data-command").split(" ");
         const codeElements = row.querySelectorAll("code:not([data-bs-toggle])");
         
         codeElements.forEach(code => {
@@ -42,10 +43,15 @@ function addParameterTooltips() {
             const paramIndex = code.getAttribute("data-param-index");
             let tooltipText = "";
 
-            if (paramIndex) {
-                tooltipText = paramTooltip[commandAttr]?.[`${paramName}_${paramIndex}`] || "";
-            } else {
-                tooltipText = paramTooltip[commandAttr]?.[paramName] || "";
+            // Try all commandAttrs, stop at the first match
+            for (const commandAttr of commandAttrs) {
+                if (paramIndex && paramTooltip[commandAttr]?.[`${paramName}_${paramIndex}`]) {
+                    tooltipText = paramTooltip[commandAttr][`${paramName}_${paramIndex}`];
+                    break;
+                } else if (paramTooltip[commandAttr]?.[paramName]) {
+                    tooltipText = paramTooltip[commandAttr][paramName];
+                    break;
+                }
             }
 
             if (tooltipText) {
@@ -87,18 +93,28 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     let selectedChangelog = fetchedChangelogJson.find(x => x.version == fetchedChangelogJson[fetchedChangelogJson.length - 1].version);
     
-    let formattedChangelog = `<h2 class="changelog">${selectedChangelog.version}</h2>`;
+    let formattedChangelog = `<h3 class="changelog">${selectedChangelog.version}</h3>`;
     formattedChangelog += `<p class="date">${selectedChangelog.date}</p>`
     formattedChangelog += `<p class="changelog">${formatChangelog(selectedChangelog.changelog)}</p>`;
     
     if (selectedChangelog.subversions && selectedChangelog.subversions.length > 0) {
         for (let i = 0; i < selectedChangelog.subversions.length; i++) {
             const subversion = selectedChangelog.subversions[i];
-            formattedChangelog += `<hr><h2 class="changelog">${subversion.version}</h2>`;
+            formattedChangelog += `<hr><h3 class="changelog">${subversion.version}</h3>`;
             formattedChangelog += `<p class="date">${subversion.date}</p>`
             formattedChangelog += `<p class="changelog">${formatChangelog(subversion.changelog)}</p>`;
         }
     }
     
-    document.getElementById("changelog").innerHTML = formattedChangelog;
+    const changelogElem = document.getElementById("changelog");
+    if (changelogElem) {
+        changelogElem.innerHTML = formattedChangelog;
+    }
+
+    // Animáció betöltéskor
+    document.querySelectorAll(".anim").forEach((el, i) => {
+        setTimeout(() => {
+            el.classList.add('slide-in');
+        }, 100 + i * 120);
+    });
 });

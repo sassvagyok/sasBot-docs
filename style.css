@@ -5,10 +5,12 @@ html {
 }
 
 body {
-    background-color: #1a2949 !important;
+    background-color: #162444 !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Alexandria', sans-serif !important;
+    color: #e6eff3 !important;
 }
 
 a:link {
@@ -28,8 +30,9 @@ a:hover {
 
 .navbar {
     background-color: #0b111b !important;
-    margin-bottom: 30px !important;
-    padding: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-right: 10px !important;
 }
 
 .navbar-toggler:focus,
@@ -52,17 +55,13 @@ a:hover {
 nav ul li a {
     font-family: 'Alexandria', sans-serif;
     font-weight: 500 !important;
-    font-size: 115% !important;
-    border-radius: 8px;
+    font-size: 125% !important;
     background-color: transparent;
-    color: #aaaaaa !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    margin: 5px;
+    margin-right: 5px !important;
+    color: #9b9b9b !important;
 }
 
 nav ul li a:hover {
-    background-color: #363636;
     transition: 0.2s;
     color: #e7e7e7 !important;
 }
@@ -76,24 +75,24 @@ nav ul li a:visited {
 }
 
 nav ul a.active {
-    background-color: #e7e7e7;
-    color: #070510 !important;
-}
-
-nav ul a.active:hover {
-    background-color: #e7e7e7;
-    color: #070510 !important;
+    color: #e7e7e7 !important;
 }
 
 nav ul li a.invite {
-    transition: 0.2s;
+    transition: 0.3s;
     background-color: #39a1e2;
     color: #ffffff !important;
     box-shadow: 0 0 10px #1985c0;
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+    margin-right: 0 !important;
+    border-radius: 10px;
 }
+
 nav ul li a.invite:hover {
-    transition: 0.2s;
+    transition: 0.3s;
     box-shadow: 0 0 15px #3ba8ec;
+    text-shadow: 0 0 10px #d8d8d8;
 }
 
 .nav-icon {
@@ -105,24 +104,29 @@ nav ul li a.invite:hover {
     top: -1px;
 }
 
-.title {
-    margin-bottom: 20px;
-}
-
 hr {
     border: none;
-    height: 3px;
+    height: 2px;
     background-color: #e7e7e7;
+    margin-bottom: 50px !important;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.anim.slide-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .tabcontent {
     border-top: none;
-    animation: fadeEffect 0.5s;
-    padding: 10px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 25px;
-    margin-bottom: 60px;
 }
 
 .moderation-showcase {
@@ -153,12 +157,24 @@ hr {
 h1 {
     font-family: 'Alexandria', sans-serif;
     font-weight: 600 !important;
-    font-size: 250% !important;
+    font-size: 300% !important;
+    color: #e6eff3 !important;
+    text-align: center;
+    margin-top: 50px !important;
+    margin-bottom: 20px !important;
+}
+
+h2 {
+    margin-top: 30px !important;
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 500;
+    font-size: 220% !important;
+    padding-bottom: 0px;
     color: #e6eff3 !important;
     text-align: center;
 }
 
-h2 {
+h3 {
     font-family: 'Alexandria', sans-serif;
     font-weight: 500;
     font-size: 200% !important;
@@ -167,17 +183,12 @@ h2 {
     text-align: center;
 }
 
-h2.changelog {
+h3.changelog {
     font-size: 150% !important;
     margin-bottom: 0 !important;
 }
 
-.changelog-showcase hr {
-    height: 2px;
-    margin-top: 10px;
-}
-
-h3 {
+h4 {
     font-family: 'Alexandria', sans-serif;
     font-weight: 400 !important;
     font-size: 100% !important;
@@ -187,14 +198,19 @@ h3 {
     text-align: center;
 }
 
-p.command-showcase {
+.changelog-showcase hr {
+    height: 2px;
+    margin-top: 10px;
+}
+
+.command-showcase {
     color: #ffffff !important;
     font-size: 100% !important;
-    padding-bottom: 0px;
-    padding-top: 1px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-bottom: 0px;
     font-weight: 300 !important;
-    text-align: center;
+    text-align: left;
 }
 
 img.gif {
@@ -209,8 +225,8 @@ img.gif {
 
 footer {
     padding-top: 10px;
-    margin-top: auto;
-    padding-bottom: 0;
+    margin-top: 60px;
+    padding-bottom: 10px;
     background-color: #0b111b;
 }
 
@@ -218,6 +234,7 @@ p {
     font-family: 'Alexandria', sans-serif;
     text-align: center;
     color: #e6eff3;
+    margin-bottom: 0 !important;
 }
 
 p#changelog {
@@ -258,8 +275,8 @@ p.footer-links, p#version {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    border-radius: 8px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     padding: 10px;
     outline: none;
     width: 210px;
@@ -296,16 +313,24 @@ table.commands {
     border-style: hidden !important;
     border-radius: 15px;
     overflow: hidden;
-    margin-bottom: 40px;
 }
 
 table.legend {
-    margin-top: 15px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0 !important;
 }
 
 caption {
-    margin-top: 9px;
+    margin-top: 5px;
     color: #e6eff3 !important;
+}
+
+caption p {
+    margin-top: 5px;
 }
 
 table.commands th, table.commands td {
