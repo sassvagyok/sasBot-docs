@@ -1,73 +1,3 @@
-// Parancsok keresése
-function searchFunction() {
-    const input = document.getElementById("pInput");
-    const filter = input.value.toUpperCase();
-    const table = document.querySelector(".commands");
-    const rows = table.getElementsByTagName("tr");
-
-    for (let i = 1; i < rows.length; i++) {
-        const cell = rows[i].getElementsByTagName("td")[0];
-        if (cell) {
-            const cellClone = cell.cloneNode(true);
-            
-            const codeElements = cellClone.querySelectorAll("code");
-            codeElements.forEach(code => code.remove());
-            
-            const txtValue = cellClone.textContent || cellClone.innerText;
-            
-            rows[i].style.display = txtValue.toUpperCase().includes(filter) ? "" : "none";
-        }
-    }
-}
-
-// Tooltip-pek kezelése
-let paramTooltip = {};
-
-fetch("https://raw.githubusercontent.com/sassvagyok/sasOS-data/main/parameterTooltips.json")
-    .then(x => x.json())
-    .then(data => {
-        paramTooltip = data,
-        addParameterTooltips();
-    });
-
-function addParameterTooltips() {
-    const commandRows = document.querySelectorAll("tr[data-command]");
-    
-    commandRows.forEach(row => {
-        // Split data-command by space, e.g. "8ball generic" => ["8ball", "generic"]
-        const commandAttrs = row.getAttribute("data-command").split(" ");
-        const codeElements = row.querySelectorAll("code:not([data-bs-toggle])");
-        
-        codeElements.forEach(code => {
-            const paramName = code.textContent.trim();
-            const paramIndex = code.getAttribute("data-param-index");
-            let tooltipText = "";
-
-            // Try all commandAttrs, stop at the first match
-            for (const commandAttr of commandAttrs) {
-                if (paramIndex && paramTooltip[commandAttr]?.[`${paramName}_${paramIndex}`]) {
-                    tooltipText = paramTooltip[commandAttr][`${paramName}_${paramIndex}`];
-                    break;
-                } else if (paramTooltip[commandAttr]?.[paramName]) {
-                    tooltipText = paramTooltip[commandAttr][paramName];
-                    break;
-                }
-            }
-
-            if (tooltipText) {
-                code.setAttribute("data-bs-toggle", "tooltip");
-                code.setAttribute("data-bs-html", "true");
-                code.setAttribute("title", tooltipText);
-            }
-        });
-    });
-    
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll("[data-bs-toggle='tooltip']"));
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-}
-
 // Changelog formázása
 function formatChangelog(text) {
     let formatted = text.replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
@@ -117,4 +47,38 @@ document.addEventListener("DOMContentLoaded", async function () {
             el.classList.add('slide-in');
         }, 100 + i * 120);
     });
+
+    // Parancs keresés
+    const searchInput = document.getElementById("accordionSearch");
+    if (searchInput) {
+        searchInput.addEventListener("input", function () {
+            const keyword = searchInput.value.trim().toLowerCase();
+
+            const accordionCollapses = document.querySelectorAll('.offcanvas .accordion-collapse');
+            accordionCollapses.forEach(collapse => {
+                const lis = collapse.querySelectorAll('ul li');
+                let hasVisibleItems = false;
+                
+                lis.forEach(li => {
+                    const text = li.textContent.toLowerCase();
+                    if (!keyword || text.includes(keyword)) {
+                        li.style.display = '';
+                        hasVisibleItems = true;
+                    } else {
+                        li.style.display = 'none';
+                    }
+                });
+
+                if (hasVisibleItems) {
+                    if (!collapse.classList.contains("show")) {
+                        new bootstrap.Collapse(collapse, { show: true });
+                    }
+                } else {
+                    if (collapse.classList.contains("show")) {
+                        new bootstrap.Collapse(collapse, { toggle: true });
+                    }
+                }
+            });
+        });
+    }
 });

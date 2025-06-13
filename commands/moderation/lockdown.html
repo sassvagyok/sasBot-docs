@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="media/icon_transparent_outlined.png">
-    <title>sasOS Discord Bot</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../media/icon_transparent.png">
+    <title>Lockdown - sasOS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3b3f778d59.js" crossorigin="anonymous"></script>
 </head>
@@ -23,12 +23,12 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav flex-fill">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParancsok" aria-controls="offcanvasParancsok" title="Összes parancs megtekintése"><i class="fa-solid fa-terminal"></i></a>
+                            <a class="nav-link fw-bold active" aria-current="page" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParancsok" aria-controls="offcanvasParancsok" title="Összes parancs megtekintése"><i class="fa-solid fa-terminal"></i></a>
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-fill justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold active" aria-current="page" href="index.html" title="Vissza a főoldalra"><img src="media/icon_transparent_zoomed_in.png" alt="Ikon" class="nav-icon"></a>
+                            <a class="nav-link" href="../../index.html" title="Vissza a főoldalra"><img src="../../media/icon_transparent_zoomed_in.png" alt="Ikon" class="nav-icon"></a>
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-fill justify-content-end">
@@ -51,57 +51,57 @@
                 <div class="accordion" id="moderation">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-mod" aria-expanded="false" aria-controls="flush-mod">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-mod" aria-expanded="true" aria-controls="flush-mod">
                                 Moderáció - 15
                             </button>
                         </h2>
-                        <div id="flush-mod" class="accordion-collapse collapse">
+                        <div id="flush-mod" class="accordion-collapse collapse show">
                             <div class="accordion-body">
                                 <ul>
                                     <li>
-                                        <a href="commands/moderation/ban.html">Ban</a>
+                                        <a href="ban.html">Ban</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/bans.html">Bans</a>
+                                        <a href="bans.html">Bans</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/clear.html">Clear</a>
+                                        <a href="clear.html">Clear</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/kick.html">Kick</a>
+                                        <a href="kick.html">Kick</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/kicks.html">Kicks</a>
+                                        <a href="kicks.html">Kicks</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/lockdown.html">Lockdown</a>
+                                        <a href="lockdown.html" class="active">Lockdown</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/moderations.html">Moderations</a>
+                                        <a href="moderations.html">Moderations</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/removetimeout.html">Removetimeout</a>
+                                        <a href="removetimeout.html">Removetimeout</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/slowmode.html">Slowmode</a>
+                                        <a href="slowmode.html">Slowmode</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/timeout.html">Timeout</a>
+                                        <a href="timeout.html">Timeout</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/timeouts.html">Timeouts</a>
+                                        <a href="timeouts.html">Timeouts</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/unban.html">Unban</a>
+                                        <a href="unban.html">Unban</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/unlockdown.html">Unlockdown</a>
+                                        <a href="unlockdown.html">Unlockdown</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/warn.html">Warn</a>
+                                        <a href="warn.html">Warn</a>
                                     </li>
                                     <li>
-                                        <a href="commands/moderation/warns.html">Warns</a>
+                                        <a href="warns.html">Warns</a>
                                     </li>
                                 </ul>
                             </div>
@@ -117,58 +117,58 @@
                             <div class="accordion-body">
                                 <ul>
                                     <li>
-                                        <a href="commands/music/autoplay.html">Autoplay</a>
+                                        <a href="../music/autoplay.html">Autoplay</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/clearqueue.html">Clearqueue</a>
+                                        <a href="../music/clearqueue.html">Clearqueue</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/filter.html">Filter</a>
+                                        <a href="../music/filter.html">Filter</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/loop.html">Loop</a>
+                                        <a href="../music/loop.html">Loop</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/lyrics.html">Lyrics</a>
+                                        <a href="../music/lyrics.html">Lyrics</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/most.html">Most</a>
+                                        <a href="../music/most.html">Most</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/pause.html">Pause</a>
+                                        <a href="../music/pause.html">Pause</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/play.html">Play</a>
+                                        <a href="../music/play.html">Play</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/previous.html">Previous</a>
+                                        <a href="../music/previous.html">Previous</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/queue.html">Queue</a>
+                                        <a href="../music/queue.html">Queue</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/remove.html">Remove</a>
+                                        <a href="../music/remove.html">Remove</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/restart.html">Restart</a>
+                                        <a href="../music/restart.html">Restart</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/resume.html">Resume</a>
+                                        <a href="../music/resume.html">Resume</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/seek.html">Seek</a>
+                                        <a href="../music/seek.html">Seek</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/shuffle.html">Shuffle</a>
+                                        <a href="../music/shuffle.html">Shuffle</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/skip.html">Skip</a>
+                                        <a href="../music/skip.html">Skip</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/stop.html">Stop</a>
+                                        <a href="../music/stop.html">Stop</a>
                                     </li>
                                     <li>
-                                        <a href="commands/music/volume.html">Volume</a>
+                                        <a href="../music/volume.html">Volume</a>
                                     </li>
                                 </ul>
                             </div>
@@ -184,40 +184,40 @@
                             <div class="accordion-body">
                                 <ul>
                                     <li>
-                                        <a href="commands/configuration/autoroles.html">Autoroles</a>
+                                        <a href="../configuration/autoroles.html">Autoroles</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/customcommand.html">Customcommand</a>
+                                        <a href="../configuration/customcommand.html">Customcommand</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/djrole.html">Djrole</a>
+                                        <a href="../configuration/djrole.html">Djrole</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/farewell.html">Farewell</a>
+                                        <a href="../configuration/farewell.html">Farewell</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/membercounter.html">Membercounter</a>
+                                        <a href="../configuration/membercounter.html">Membercounter</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/modconfig.html">Modconfig</a>
+                                        <a href="../configuration/modconfig.html">Modconfig</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/permissions.html">Permissions</a>
+                                        <a href="../configuration/permissions.html">Permissions</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/saveroles.html">Saveroles</a>
+                                        <a href="../configuration/saveroles.html">Saveroles</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/serversettings.html">Serversettings</a>
+                                        <a href="../configuration/serversettings.html">Serversettings</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/toggle.html">Toggle</a>
+                                        <a href="../configuration/toggle.html">Toggle</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/welcome.html">Welcome</a>
+                                        <a href="../configuration/welcome.html">Welcome</a>
                                     </li>
                                     <li>
-                                        <a href="commands/configuration/zenecsatorna.html">Zenecsatorna</a>
+                                        <a href="../configuration/zenecsatorna.html">Zenecsatorna</a>
                                     </li>
                                 </ul>
                             </div>
@@ -233,55 +233,55 @@
                             <div class="accordion-body">
                                 <ul>
                                     <li>
-                                        <a href="commands/miscellaneous/8ball.html">8ball</a>
+                                        <a href="../miscellaneous/8ball.html">8ball</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/ascii.html">Ascii</a>
+                                        <a href="../miscellaneous/ascii.html">Ascii</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/avatár.html">Avatár</a>
+                                        <a href="../miscellaneous/avatár.html">Avatár</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/coinflip.html">Coinflip</a>
+                                        <a href="../miscellaneous/coinflip.html">Coinflip</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/echo.html">Echo</a>
+                                        <a href="../miscellaneous/echo.html">Echo</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/emojify.html">Emojify</a>
+                                        <a href="../miscellaneous/emojify.html">Emojify</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/kőpapírolló.html">Kőpapírolló</a>
+                                        <a href="../miscellaneous/kőpapírolló.html">Kőpapírolló</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/miatyánk.html">Miatyánk</a>
+                                        <a href="../miscellaneous/miatyánk.html">Miatyánk</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/nekosbest.html">Nekosbest</a>
+                                        <a href="../miscellaneous/nekosbest.html">Nekosbest</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/nem.html">Nem</a>
+                                        <a href="../miscellaneous/nem.html">Nem</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/randomszám.html">Randomszám</a>
+                                        <a href="../miscellaneous/randomszám.html">Randomszám</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/replace.html">Replace</a>
+                                        <a href="../miscellaneous/replace.html">Replace</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/sadstory.html">Sadstory</a>
+                                        <a href="../miscellaneous/sadstory.html">Sadstory</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/serverinfo.html">Serverinfo</a>
+                                        <a href="../miscellaneous/serverinfo.html">Serverinfo</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/szóharc.html">Szóharc</a>
+                                        <a href="../miscellaneous/szóharc.html">Szóharc</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/szókeresés.html">Szókeresés</a>
+                                        <a href="../miscellaneous/szókeresés.html">Szókeresés</a>
                                     </li>
                                     <li>
-                                        <a href="commands/miscellaneous/userinfo.html">Userinfo</a>
+                                        <a href="../miscellaneous/userinfo.html">Userinfo</a>
                                     </li>
                                 </ul>
                             </div>
@@ -297,19 +297,19 @@
                             <div class="accordion-body">
                                 <ul>
                                     <li>
-                                        <a href="commands/information/changelog.html">Changelog</a>
+                                        <a href="../information/changelog.html">Changelog</a>
                                     </li>
                                     <li>
-                                        <a href="commands/information/feedback.html">Feedback</a>
+                                        <a href="../information/feedback.html">Feedback</a>
                                     </li>
                                     <li>
-                                        <a href="commands/information/help.html">Help</a>
+                                        <a href="../information/help.html">Help</a>
                                     </li>
                                     <li>
-                                        <a href="commands/information/info.html">Info</a>
+                                        <a href="../information/info.html">Info</a>
                                     </li>
                                     <li>
-                                        <a href="commands/information/status.html">Status</a>
+                                        <a href="../information/status.html">Status</a>
                                     </li>
                                 </ul>
                             </div>
@@ -322,81 +322,37 @@
     <div class="container-fluid">
         <main id="content">
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5 mb-2 anim">
-                    <h1>sasOS Discord Bot</h1>
+                <div class="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5 mb-5 anim">
+                    <h1 class="command">Lockdown</h1>
+                    <h2 class="command">Moderáció</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-5 col-xl-4 mb-5 tabcontent changelog-showcase anim">
-                    <p>sasOS egy teljesen ingyenes, rendszeresen fejlesztett JavaScript alapú Discord Bot, rengeteg különféle funkcióval.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-11 col-md-10 col-xl-8 mb-5 anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 py-4 tabcontent command-info anim">
+                    <h3 class="command">Leírás</h3>
                     <hr>
+                    <p>Jelenlegi vagy megadott csatorna lezárása, akár megadott időre</p>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-5 col-xl-4 mx-4 mb-5 tabcontent moderation-showcase anim">
-                    <h2>Moderálás</h2>
-                    <h3>Funkciókkal teli moderációs parancsok</h3>
-                    <img class="img-fluid gif" src="media/ban.gif" alt="A kitiltás parancsának bemutatása indok és időtartam megadásával.">
-                    <ul class="command-showcase">
-                        <li>Moderációk feljegyzése, és lekérése sorszám alapján</li>
-                        <li>Tagok kitiltása, Kirúgása, Felfüggesztése, Figyelmeztetése</li>
-                        <li>Csatornák lezárása | Üzenetek törlése</li>
-                    </ul>
-                </div>
-                <div class="col-10 col-sm-10 col-md-8 col-lg-5 col-xl-4 mx-4 mb-5 tabcontent music-showcase anim">
-                    <h2>Zenelejátszás</h2>
-                    <h3>Zenék lejátszása könnyedén, több száz oldalról</h3>
-                    <img class="img-fluid gif" src="media/play.gif" alt="A zenelejátszás indításának bemutatása.">
-                    <ul class="command-showcase">
-                        <li>Lejátszás | Zeneszöveg keresése | Megkeverés | Filterek alkalmazása</li>
-                        <li>Átugrás | Visszalépés | Megállítás | Elindítás | Ismétlés állítása</li>
-                        <li>Zenelejátszás ranghoz vagy csatornához kötése</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-5 col-xl-4 mx-4 mb-5 tabcontent config-showcase anim">
-                    <h2>Testreszabás</h2>
-                    <h3>Szabd testre sasOS-t ízlésed szerint</h3>
-                    <img class="img-fluid gif" src="media/customcommand.gif" alt="Az egyedi parancs hozzáadásának bemutatása 'sasos' nevű paranccsal és 'A legeslegjobb bot' válasz megadásával.">
-                    <ul class="command-showcase">
-                        <li>Egyedi parancsok létrehozása | Üdvözlő- és Búcsúüzenet beállítása</li>
-                        <li>Tagok rangjainak megjegyzése | Automatikus rangok beállítása</li>
-                        <li>Parancsok kikapcsolása, vagy egyedi ranghoz kötése</li>
-                    </ul>
-                </div>
-                <div class="col-10 col-sm-10 col-md-8 col-lg-5 col-xl-4 mx-4 mb-5 tabcontent misc-showcase anim">
-                    <h2>Ezenfelül</h2>
-                    <h3>Sokszínű parancsok sokasága</h3>
-                    <img class="img-fluid gif" src="media/szoharc.gif" alt="Szóharc parancs bemutatása 'applikáció' szó használatával.">
-                    <ul class="command-showcase">
-                        <li>Információk a szerverről, tagokról | Profilképek lekérése</li>
-                        <li>ASCII-kép keszítése szövegből | Szóharc | Nekosbest API képek</li>
-                        <li>8ball | Kő-papír-olló | Érme feldobás</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-10 mb-5 text-center anim">
-                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParancsok" aria-controls="offcanvasParancsok" title="Összes parancs megtekintése">
-                        Összes parancs
-                    </button>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-11 col-md-10 col-xl-8 mb-5 anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 py-4 tabcontent command-info anim">
+                    <h3 class="command">Paraméterek</h3>
                     <hr>
+                    <ul>
+                        <li>
+                            <p class="param"><code class="optional">csatorna</code>: Csatorna, amit le akarsz zárni (üres: jelenlegi csatorna)</p>
+                        </li>
+                        <li>
+                            <p class="param"><code class="optional">időtartam</code>: Lezárás időtartama (m/h/d) (üres: nincs lejárat)</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 tabcontent changelog-showcase anim">
-                    <h2>Legutóbbi változások</h2>
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 py-4 tabcontent command-info anim">
+                    <h3 class="command">Szükséges</h3>
                     <hr>
-                    <p id="changelog">...</p>
+                    <p>'Csatornák kezelése' jogosultság</p>
                 </div>
             </div>
         </main>
@@ -411,7 +367,7 @@
             </div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="../../index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -4,4 +4,4 @@
 - Opció visszajelzés küldésére
 - Opció a Sötét/Világos mód állítására
 
-#### Discord: `mattekys`
+#### Discord: `mattexyz`
