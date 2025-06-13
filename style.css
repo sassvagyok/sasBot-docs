@@ -59,6 +59,8 @@ nav ul li a {
     font-family: 'Alexandria', sans-serif;
     font-weight: 500 !important;
     font-size: 125% !important;
+    margin-left: 5px;
+    margin-right: 5px;
     background-color: transparent;
     color: #9b9b9b !important;
 }
@@ -86,11 +88,8 @@ nav ul li a.invite {
     background-color: #39a1e2;
     color: #ffffff !important;
     box-shadow: 0 0 10px #1985c0;
-    padding-left: 17px !important;
-    padding-right: 17px !important;
-    padding-top: 7px !important;
-    padding-bottom: 7px !important;
-    margin-right: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
     border-radius: 10px;
 }
 
@@ -348,7 +347,7 @@ footer {
 
 li {
     font-weight: 400 !important;
-    text-align: justify !important;
+    text-align: left !important;
 }
 
 p {
@@ -503,7 +502,7 @@ code.optional {
 }
 
 .offcanvas .accordion-body li {
-    padding: 1px;
+    padding-bottom: 3px;
 }
 
 .offcanvas .accordion-body li a {
@@ -555,6 +554,10 @@ code.optional {
         font-size: 95% !important;
     }
 
+    h5 {
+        font-size: 160% !important;
+    }
+
     p {
         font-size: 90% !important;
     }
@@ -565,5 +568,10 @@ code.optional {
 
     img.gif {
         max-width: 95%;
+    }
+
+    .offcanvas .accordion-body li {
+        font-size: 95% !important;
+        padding-bottom: 5px;
     }
 }
