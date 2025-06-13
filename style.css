@@ -245,6 +245,11 @@ h1 {
     color: #e6eff3 !important;
     text-align: center;
     margin-top: 100px !important;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 h1.command {
@@ -362,6 +367,10 @@ p.param {
     text-align: left;
     margin-bottom: 0 !important;
     margin: 5px;
+}
+
+p.date {
+    margin-bottom: 10px !important;
 }
 
 p#changelog {
@@ -535,11 +544,11 @@ code.optional {
 
 @media (max-width: 767px) {
     h1 {
-        font-size: 280% !important;
+        font-size: 190% !important;
     }
 
     h2 {
-        font-size: 175% !important;
+        font-size: 150% !important;
     }
 
     h2.command {
@@ -547,15 +556,15 @@ code.optional {
     }
 
     h3.command {
-        font-size: 130% !important;
+        font-size: 110% !important;
     }
 
     h3 {
-        font-size: 95% !important;
+        font-size: 90% !important;
     }
 
     h5 {
-        font-size: 160% !important;
+        font-size: 140% !important;
     }
 
     p {
@@ -573,5 +582,17 @@ code.optional {
     .offcanvas .accordion-body li {
         font-size: 95% !important;
         padding-bottom: 5px;
+    }
+
+    .accordion-button {
+        font-size: 70% !important;
+    }
+
+    #accordionSearch {
+        font-size: 100%;
+    }
+
+    .btn {
+        font-size: 105% !important;
     }
 }
