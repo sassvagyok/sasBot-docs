@@ -588,8 +588,9 @@ code.optional {
         font-size: 90% !important;
     }
 
-    p.param {
+    .command-info li {
         font-size: 100% !important;
+        margin-left: -10px;
     }
 
     img.gif {
