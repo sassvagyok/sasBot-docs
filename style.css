@@ -556,7 +556,7 @@ code.optional {
 
 @media (max-width: 767px) {
     h1 {
-        font-size: 190% !important;
+        font-size: 180% !important;
         margin-top: 90px !important;
     }
 
@@ -588,6 +588,10 @@ code.optional {
         font-size: 90% !important;
     }
 
+    p.param {
+        font-size: 100% !important;
+    }
+
     img.gif {
         max-width: 95%;
     }
@@ -607,5 +611,9 @@ code.optional {
 
     .btn {
         font-size: 105% !important;
+    }
+
+    p.footer-icons {
+        font-size: 120% !important;
     }
 }
