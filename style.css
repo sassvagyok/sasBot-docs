@@ -20,17 +20,14 @@ body {
 
 a:link {
     color: #1D88EC;
-    text-decoration: none;
 }
 
 a:visited {
-    color: #1D88EC;
-    text-decoration: none;
+    color: #1970c2;
 }
 
 a:hover {
-    color: #7ccdff;
-    text-decoration: none;
+    color: #69c4fd;
 }
 
 .navbar {
@@ -45,6 +42,7 @@ a:hover {
 }
 
 .fa-bars, .fa-bars:visited {
+    transition: 0.2s;
     color:#e7e7e7;
     font-size: 100%;
     padding: 5px 5px !important;
@@ -52,6 +50,18 @@ a:hover {
 
 .fa-bars:hover {
     color:#5e5e5e;
+    transition: 0.2s;
+}
+
+.fa-brands, .fa-brands:visited {
+    color:#888888;
+    transition: 0.2s;
+    font-size: 100%;
+    padding: 5px 5px !important;
+}
+
+.fa-brands:hover {
+    color:#d8d7d7;
     transition: 0.2s;
 }
 
@@ -241,7 +251,7 @@ hr {
 h1 {
     font-family: 'Alexandria', sans-serif;
     font-weight: 600 !important;
-    font-size: 320% !important;
+    font-size: 310% !important;
     color: #e6eff3 !important;
     text-align: center;
     margin-top: 100px !important;
@@ -277,7 +287,7 @@ h2, .command-info h3 {
 
 h2.command {
     font-weight: 400 !important;
-    font-size: 160% !important;
+    font-size: 170% !important;
     margin-bottom: 0 !important;
     color: #cad1d3 !important;
 }
@@ -345,9 +355,16 @@ img.gif {
 
 footer {
     padding-top: 10px;
-    margin-top: 60px;
     padding-bottom: 10px;
+    margin-top: 60px;
     background-color: #0b111b;
+}
+
+footer .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 li {
@@ -384,20 +401,12 @@ p.changelog {
     margin-bottom: 0px;
 }
 
-#version {
-    margin-bottom: 0;
+p.footer-icons {
+    font-size: 140% !important;
 }
 
-p.footer-links {
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-p.footer-links, p#version {
-    font-size: 95%;
+p#version, p.footer-text {
     color: #cacecf;
-    display: inline-block;
-    margin-right: 5px;
 }
 
 code {
@@ -523,14 +532,17 @@ code.optional {
 .offcanvas .accordion-body li a:hover {
     transition: 0.2s;
     color: #e7e7e7 !important;
+    text-decoration: none;
 }
 
 .offcanvas .accordion-body li a:link {
     color: #e7e7e7;
+    text-decoration: none;
 }
 
 .offcanvas .accordion-body li a:visited {
     color: #e7e7e7;
+    text-decoration: none;
 }
 
 .offcanvas .accordion-body li a.active {
@@ -545,6 +557,7 @@ code.optional {
 @media (max-width: 767px) {
     h1 {
         font-size: 190% !important;
+        margin-top: 90px !important;
     }
 
     h2 {
