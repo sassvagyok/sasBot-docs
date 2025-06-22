@@ -1,1 +1,3 @@
-permalink: /:basename/
+permalink: pretty
+plugins:
+  - jekyll-optional-front-matter
