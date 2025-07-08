@@ -11,14 +11,14 @@ function formatChangelog(text) {
 
 document.addEventListener("DOMContentLoaded", async function () {
     // Verziószám lekérése
-    const fetchVersion = await fetch("https://api.github.com/repos/sassvagyok/sasOS-docs/commits/main");
+    const fetchVersion = await fetch("https://api.github.com/repos/sassvagyok/sasBot-docs/commits/main");
     const fetchedVersionJson = await fetchVersion.json();
     
     document.getElementById("version").innerHTML = fetchedVersionJson.commit.message.indexOf("\n") > -1 ? fetchedVersionJson.commit.message.substring(0, fetchedVersionJson.commit.message.indexOf("\n")) : fetchedVersionJson.commit.message;
 
 
     // Változáslista kezelése
-    const fetchChangelog = await fetch("https://raw.githubusercontent.com/sassvagyok/sasOS-data/main/changelog.json");
+    const fetchChangelog = await fetch("https://raw.githubusercontent.com/sassvagyok/sasBot-data/main/changelog.json");
     const fetchedChangelogJson = await fetchChangelog.json();
 
     let selectedChangelog = fetchedChangelogJson.find(x => x.version == fetchedChangelogJson[fetchedChangelogJson.length - 1].version);
