@@ -156,7 +156,7 @@ hr {
 .anim {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .anim.slide-in {
@@ -318,7 +318,8 @@ h5 {
 
 .command-info hr {
     height: 2px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 23px;
 }
 
 .command-info li {

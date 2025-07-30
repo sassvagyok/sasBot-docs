@@ -334,14 +334,14 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 py-4 tabcontent command-info anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
                     <h3 class="command">Leírás</h3>
                     <hr>
                     <p>Egyedi búcsúüzenet beállítása, törlése vagy megtekintése, ami a tagok kilépésekor a megadott csatornában lesz megjelenítve</p>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 py-4 tabcontent command-info anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
                     <h3 class="command">Alparancsok</h3>
                     <hr>
                     <ul>
@@ -349,28 +349,28 @@
                             <p class="param"><b>Beállítás</b>: Búcsúüzenet beállítása</p>
                             <ul>
                                 <li>
-                                    <p class="param"><code>csatorna</code>: Búcsúüzenet csatornája | <b>Kötelező</b></p>
+                                    <p class="param"><code>csatorna (csatorna)</code>: Búcsúüzenet csatornája | <b>Kötelező</b></p>
                                 </li>
                                 <li>
-                                    <p class="param"><code>leírás</code>: Búcsúüzenet leírása (Tag nevének kiírása: [tag]) | <b>Kötelező</b></p>
+                                    <p class="param"><code>leírás (szöveg)</code>: Búcsúüzenet leírása (Tag nevének kiírása: [tag]) | <b>Kötelező</b></p>
                                 </li>
                                 <li>
-                                    <p class="param"><code class="optional">cím</code>: Búcsúüzenet címe (Tag nevének kiírása: [tag]) (üres: nincs)</p>
+                                    <p class="param"><code class="optional">cím (szöveg)</code>: Búcsúüzenet címe (Tag nevének kiírása: [tag]) (üres: nincs)</p>
                                 </li>
                                 <li>
-                                    <p class="param"><code class="optional">fejléc</code>: Búcsúüzenet fejléce (Tag nevének kiírása: [tag]) (üres: "[tag] kilépett!")</p>
+                                    <p class="param"><code class="optional">fejléc (szöveg)</code>: Búcsúüzenet fejléce (Tag nevének kiírása: [tag]) (üres: "[tag] kilépett!")</p>
                                 </li>
                                 <li>
-                                    <p class="param"><code class="optional">kép</code>: Búcsúüzenet képe (üres: tag profilképe)</p>
+                                    <p class="param"><code class="optional">kép (szöveg)</code>: Búcsúüzenet képének linkje (üres: tag profilképe)</p>
                                 </li>
                                 <li>
-                                    <p class="param"><code class="optional">szín</code>: Búcsúüzenet színe (üres: piros)</p>
+                                    <p class="param"><code class="optional">szín (szöveg)</code>: Búcsúüzenet színe hex formátumban (pl. #ffffff) (üres: piros)</p>
                                 </li>
                                 <li>
-                                    <p class="param"><code class="optional">ikon</code>: Megjelenjen a fejléc mellett a tag profilképe? (üres: igaz)</p>
+                                    <p class="param"><code class="optional">ikon (logikai)</code>: Megjelenjen a fejléc mellett a tag profilképe? (üres: igaz)</p>
                                 </li>
                                 <li>
-                                    <p class="param"><code class="optional">timestamp</code>: Megjelenjen a kilépés ideje? (üres: igaz)</p>
+                                    <p class="param"><code class="optional">timestamp (logikai)</code>: Megjelenjen a kilépés ideje? (üres: igaz)</p>
                                 </li>
                             </ul>
                         </li>
@@ -387,10 +387,17 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 py-4 tabcontent command-info anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
                     <h3 class="command">Szükséges</h3>
                     <hr>
-                    <p>'Adminisztátor' jogosultság</p>
+                    <p><code>Adminisztátor</code> jogosultság</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 pt-3 pb-4 tabcontent command-info anim">
+                    <h3 class="command">Elérhető</h3>
+                    <hr>
+                    <p><code>Slash-parancs</code></p>
                 </div>
             </div>
         </main>

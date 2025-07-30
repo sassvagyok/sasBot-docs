@@ -334,14 +334,14 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 py-4 tabcontent command-info anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
                     <h3 class="command">Leírás</h3>
                     <hr>
                     <p>sasBot által végzett moderációk viselkedéseinek konfigurálása (üzenetküldés a csatornába, moderációk mentése, privát üzenetküldés), log-csatorna kezelése és beállítások megjelenítése</p>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 py-4 tabcontent command-info anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
                     <h3 class="command">Alparancsok</h3>
                     <hr>
                     <ul>
@@ -355,7 +355,7 @@
                                     <p class="param"><b>DM</b>: sasBot-moderációk privát üzenetküldésének konfigurálása</p>
                                     <ul>
                                         <li>
-                                            <p class="param"><code>bekapcsolás</code>: Legyenek a sasBot által végzett moderációk elküldve az érintett tagnak? (alapértelmezett: igen) | <b>Kötelező</b></p>
+                                            <p class="param"><code>bekapcsolás (logikai)</code>: Legyenek a sasBot által végzett moderációk elküldve az érintett tagnak? (alapértelmezett: igen) | <b>Kötelező</b></p>
                                         </li>
                                     </ul>
                                 </li>
@@ -363,7 +363,7 @@
                                     <p class="param"><b>Küldés</b>: sasBot-moderációk üzenetküldésének konfigurálása</p>
                                     <ul>
                                         <li>
-                                            <p class="param"><code>bekapcsolás</code>: Legyenek a sasBot által végzett moderációkról üzenetek küldve? (alapértelmezett: igen) | <b>Kötelező</b></p>
+                                            <p class="param"><code>bekapcsolás (logikai)</code>: Legyenek a sasBot által végzett moderációkról üzenetek küldve? (alapértelmezett: igen) | <b>Kötelező</b></p>
                                         </li>
                                     </ul>
                                 </li>
@@ -371,7 +371,7 @@
                                     <p class="param"><b>Mentés</b>: sasBot-moderációk mentésének konfigurálása</p>
                                     <ul>
                                         <li>
-                                            <p class="param"><code>bekapcsolás</code>: El legyenek a sasBot által végzett moderációk mentve? (alapértelmezett: igen) | <b>Kötelező</b></p>
+                                            <p class="param"><code>bekapcsolás (logikai)</code>: El legyenek a sasBot által végzett moderációk mentve? (alapértelmezett: igen) | <b>Kötelező</b></p>
                                         </li>
                                     </ul>
                                 </li>
@@ -384,7 +384,7 @@
                                     <p class="param"><b>Beállítás</b>: sasBot-moderációk naplózásának konfigurálása</p>
                                     <ul>
                                         <li>
-                                            <p class="param"><code>csatorna</code>: Az a csatorna, ahová küldve legyenek a sasBot-moderációk (függetlenül az üzenetküldés beállításától) | <b>Kötelező</b></p>
+                                            <p class="param"><code>csatorna (csatorna)</code>: Az a csatorna, ahová küldve legyenek a sasBot-moderációk (függetlenül az üzenetküldés beállításától) | <b>Kötelező</b></p>
                                         </li>
                                     </ul>
                                 </li>
@@ -397,10 +397,17 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 py-4 tabcontent command-info anim">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
                     <h3 class="command">Szükséges</h3>
                     <hr>
-                    <p>'Adminisztátor' jogosultság</p>
+                    <p><code>Adminisztátor</code> jogosultság</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 pt-3 pb-4 tabcontent command-info anim">
+                    <h3 class="command">Elérhető</h3>
+                    <hr>
+                    <p><code>Slash-parancs</code></p>
                 </div>
             </div>
         </main>
