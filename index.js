@@ -1,12 +1,10 @@
 // Changelog formázása
 function formatChangelog(text) {
-    let formatted = text.replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
-    formatted = formatted.replace(/\`([^`]+)\`/g, "<code>$1</code>");
-    formatted = formatted.replace(/^- /gm, "&emsp;● ");
-    formatted = formatted.replace(/^\s+- /gm, "&emsp;&emsp;○ ");
-    formatted = formatted.replace(/\n/g, "<br>");
+    if (typeof marked !== "undefined") {
+        return marked.parse(text);
+    }
     
-    return formatted;
+    return text;
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -15,7 +13,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     const fetchedVersionJson = await fetchVersion.json();
     
     document.getElementById("version").innerHTML = fetchedVersionJson.commit.message.indexOf("\n") > -1 ? fetchedVersionJson.commit.message.substring(0, fetchedVersionJson.commit.message.indexOf("\n")) : fetchedVersionJson.commit.message;
-
 
     // Változáslista kezelése
     const fetchChangelog = await fetch("https://raw.githubusercontent.com/sassvagyok/sasBot-data/main/changelog.json");
