@@ -7,6 +7,10 @@ function formatChangelog(text) {
     return text;
 }
 
+function removeDashHashLines(text) {
+    return text.replace(/^-#\s?/gm, "\n");
+}
+
 document.addEventListener("DOMContentLoaded", async function () {
     // Verziószám lekérése
     const fetchVersion = await fetch("https://api.github.com/repos/sassvagyok/sasBot-docs/commits/main");
@@ -22,14 +26,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     
     let formattedChangelog = `<h3 class="changelog">${selectedChangelog.version}</h3>`;
     formattedChangelog += `<p class="date">${selectedChangelog.date}</p>`
-    formattedChangelog += `<p class="changelog">${formatChangelog(selectedChangelog.changelog)}</p>`;
+    formattedChangelog += `<p class="changelog">${formatChangelog(removeDashHashLines(selectedChangelog.changelog))}</p>`;
     
     if (selectedChangelog.subversions && selectedChangelog.subversions.length > 0) {
         for (let i = 0; i < selectedChangelog.subversions.length; i++) {
             const subversion = selectedChangelog.subversions[i];
             formattedChangelog += `<hr><h3 class="changelog">${subversion.version}</h3>`;
             formattedChangelog += `<p class="date">${subversion.date}</p>`
-            formattedChangelog += `<p class="changelog">${formatChangelog(subversion.changelog)}</p>`;
+            formattedChangelog += `<p class="changelog">${formatChangelog(removeDashHashLines(subversion.changelog))}</p>`;
         }
     }
     
