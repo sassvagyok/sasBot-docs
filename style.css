@@ -171,10 +171,6 @@ hr {
     border-radius: 25px;
 }
 
-.moderation-showcase li, .music-showcase li, .config-showcase li, .music-showcase li {
-    font-weight: 400 !important;
-}
-
 .moderation-showcase {
     background-image: linear-gradient(135deg,rgba(191, 48, 48, 1) 0%, rgba(214, 162, 17, 1) 47%, rgba(32, 148, 171, 1) 100%);
 }
@@ -252,8 +248,8 @@ hr {
     border: 2px solid #181818;
 }
 
-.info-showcase p {
-    text-align: center;
+.changelog-showcase p {
+    text-align: left;
 }
 
 h1 {
@@ -307,7 +303,7 @@ h3.command {
 }
 
 h3.changelog {
-    font-size: 150% !important;
+    font-size: 140% !important;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
@@ -377,14 +373,14 @@ footer .text-center {
 }
 
 li {
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     text-align: left !important;
 }
 
 p {
     font-family: 'Alexandria', sans-serif;
     font-weight: 300 !important;
-    text-align: left;
+    text-align: center;
     color: #e6eff3;
     margin-bottom: 0 !important;
 }
@@ -396,7 +392,6 @@ p.param {
 }
 
 p.date {
-    text-align: center;
     margin-bottom: 10px !important;
 }
 
@@ -429,10 +424,6 @@ code {
 
 code.optional {
     color: #b4b4b4 !important;
-}
-
-.command-info p {
-    text-align: center;
 }
 
 .command-info ul {
