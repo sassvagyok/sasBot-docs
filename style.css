@@ -250,6 +250,11 @@ hr {
 
 .changelog-showcase p {
     text-align: left;
+    font-weight: 400 !important;
+}
+
+.changelog-showcase li {
+    font-weight: 300 !important;
 }
 
 h1 {
