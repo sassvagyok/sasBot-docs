@@ -4,7 +4,6 @@ const accordionSearch = document.querySelector("#accordionSearch");
 const accordionCollapses = document.querySelectorAll(".offcanvas .accordion-collapse");
 const anim = document.querySelectorAll(".anim");
 
-// Parancsok keresése
 accordionSearch.addEventListener("input", onSearch);
 
 function onSearch() {
@@ -41,7 +40,6 @@ function onPageLoad() {
     });
 }
 
-// Verziószám kiírása
 async function displayVersion() {
     const fetchVersion = await fetch("https://api.github.com/repos/sassvagyok/sasBot-docs/commits/main");
     const fetchedVersionJson = await fetchVersion.json();
@@ -49,8 +47,8 @@ async function displayVersion() {
     version.innerHTML = fetchedVersionJson.commit.message.indexOf("\n") > -1 ? fetchedVersionJson.commit.message.substring(0, fetchedVersionJson.commit.message.indexOf("\n")) : fetchedVersionJson.commit.message;
 }
 
-// Változáslista kiírása
 async function loadChangelog() {
+    if (!changelog) return;
     const fetchChangelog = await fetch("https://raw.githubusercontent.com/sassvagyok/sasBot-data/main/changelog.json");
     const fetchedChangelogJson = await fetchChangelog.json();
 
@@ -70,7 +68,6 @@ async function loadChangelog() {
     changelog.innerHTML = formattedChangelog;
 }
 
-// Changelog formázása
 function formatChangelog(text) {
     if (typeof marked !== "undefined") {
         return marked.parse(text);
