@@ -3,8 +3,35 @@ const changelog = document.querySelector("#changelog");
 const accordionSearch = document.querySelector("#accordionSearch");
 const accordionCollapses = document.querySelectorAll(".offcanvas .accordion-collapse");
 const anim = document.querySelectorAll(".anim");
+const pageTitle = document.querySelector("title");
+const accordionMod = document.querySelector("#flush-mod .accordion-body");
+const accordionMusic = document.querySelector("#flush-music .accordion-body");
+const accordionConfig = document.querySelector("#flush-config .accordion-body");
+const accordionMisc = document.querySelector("#flush-misc .accordion-body");
+const accordionInfo = document.querySelector("#flush-info .accordion-body");
+const accordionButtonMod = document.querySelector("#button-mod");
+const accordionButtonMusic = document.querySelector("#button-music");
+const accordionButtonConfig = document.querySelector("#button-config");
+const accordionButtonMisc = document.querySelector("#button-misc");
+const accordionButtonInfo = document.querySelector("#button-info");
 
 accordionSearch.addEventListener("input", onSearch);
+
+async function offcanvas() {
+    const fetchCommands = await fetch("../commands.json");
+    const fetchedCommandsJson = await fetchCommands.json();
+
+    const currentPage = pageTitle.innerHTML.split(" ")[0].toLowerCase();
+
+    const accordions = [accordionMod, accordionMusic, accordionConfig, accordionMisc, accordionInfo];
+    const buttons = [accordionButtonMod, accordionButtonMusic, accordionButtonConfig, accordionButtonMisc, accordionButtonInfo];
+    const buttonTags = ["Moderáció", "Zenehallgatás", "Konfiguráció", "Sokszínű", "Információ"];
+
+    for (let i = 0; i < fetchedCommandsJson.length; i++) {
+        buttons[i].innerHTML = `${buttonTags[i]} - ${fetchedCommandsJson[i].length}`;
+        accordions[i].innerHTML = `<ul>${fetchedCommandsJson[i].map(x => `<li><a href=${`${x}.html class=${x === currentPage ? "active" : ""}> ${x.charAt(0).toUpperCase() + x.slice(1)}`}</a></li>`).join("")}</ul>`;
+    }
+}
 
 function onSearch() {
     const keyword = accordionSearch.value.trim().toLowerCase();
@@ -32,6 +59,7 @@ function onSearch() {
 function onPageLoad() {
     displayVersion();
     loadChangelog();
+    offcanvas();
 
     anim.forEach((el, i) => {
         setTimeout(() => {
