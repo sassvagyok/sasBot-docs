@@ -627,4 +627,8 @@ code.optional {
     p.footer-icons {
         font-size: 120% !important;
     }
+
+    code {
+        font-size: 90% !important;
+    }
 }
