@@ -83,21 +83,13 @@ async function displayVersion() {
 
 async function loadChangelog() {
     if (!changelog) return;
-    const fetchChangelog = await fetch("https://raw.githubusercontent.com/sassvagyok/sasBot-data/main/changelog.json");
+    const fetchChangelog = await fetch("https://raw.githubusercontent.com/sassvagyok/sasBot/refs/heads/main/data/changelog.json");
     const fetchedChangelogJson = await fetchChangelog.json();
 
     let selectedChangelog = fetchedChangelogJson.find(x => x.version === fetchedChangelogJson[fetchedChangelogJson.length - 1].version);
 
     let formattedChangelog = `<h3 class="changelog">${selectedChangelog.version} | <code>${selectedChangelog.date}</code></h3>`;
     formattedChangelog += `<p>${formatChangelog(removeDashHashLines(selectedChangelog.changelog))}</p>`;
-
-    if (selectedChangelog.subversions && selectedChangelog.subversions.length > 0) {
-        for (let i = 0; i < selectedChangelog.subversions.length; i++) {
-            const subversion = selectedChangelog.subversions[i];
-            formattedChangelog += `<hr><h3 class="changelog">${subversion.version} | <code>${subversion.date}</code></h3>`;
-            formattedChangelog += `<p>${formatChangelog(removeDashHashLines(subversion.changelog))}</p>`;
-        }
-    }
 
     changelog.innerHTML = formattedChangelog;
 }
