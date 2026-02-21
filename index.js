@@ -88,7 +88,10 @@ async function loadChangelog() {
 
     let selectedChangelog = fetchedChangelogJson.find(x => x.version === fetchedChangelogJson[fetchedChangelogJson.length - 1].version);
 
-    let formattedChangelog = `<h3 class="changelog">${selectedChangelog.version} | <code>${selectedChangelog.date}</code></h3>`;
+    const date = new Date(selectedChangelog.date * 1000);
+    const formattedDate = date.toLocaleDateString('hu-HU');
+
+    let formattedChangelog = `<h3 class="changelog">${selectedChangelog.version} | <code>${formattedDate}</code></h3>`;
     formattedChangelog += `<p>${formatChangelog(removeDashHashLines(selectedChangelog.changelog))}</p>`;
 
     changelog.innerHTML = formattedChangelog;
