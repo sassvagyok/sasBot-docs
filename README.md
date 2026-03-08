@@ -1,4 +1,4 @@
-# Egyszerű [dokumentáció](https://sassvagyok.github.io/sasBot-docs/) a sasBot Discord bothoz.
+# Egyszerű [dokumentáció](sasbot.mattexyz.com) a sasBot Discord bothoz.
 
 ## Tervezett funkciók
 - Opció visszajelzés küldésére
