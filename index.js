@@ -18,16 +18,11 @@ const accordionButtonInfo = document.querySelector("#button-info");
 accordionSearch.addEventListener("input", onSearch);
 
 async function offcanvas() {
-    let path = "";
-    let fetchCommands = await fetch("../commands.json");
+    const inCommandsDir = window.location.pathname.includes("/commands/");
+    const path = inCommandsDir ? "" : "commands/";
 
-    if (!fetchCommands.ok) {
-        fetchCommands = await fetch("commands.json");
-        path = "commands/";
-    }
-
-    console.log("fetch status:", fetchCommands.ok);
-    console.log("path:", path);
+    const fetchCommands = await fetch(inCommandsDir ? "../commands.json" : "commands.json");
+    if (!fetchCommands.ok) return;
 
     const fetchedCommandsJson = await fetchCommands.json();
     const currentPage = pageTitle.innerHTML.split(" ")[0].toLowerCase();
