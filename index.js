@@ -14,6 +14,9 @@ const accordionButtonMusic = document.querySelector("#button-music");
 const accordionButtonConfig = document.querySelector("#button-config");
 const accordionButtonMisc = document.querySelector("#button-misc");
 const accordionButtonInfo = document.querySelector("#button-info");
+const navbarTop = document.querySelector(".navbar-collapse")
+
+accordionSearch.addEventListener("input", onSearch);
 
 async function offcanvas() {
     let fetchCommands = await fetch("/commands.json");
@@ -29,6 +32,17 @@ async function offcanvas() {
         buttons[i].innerHTML = `${buttonTags[i]} - ${fetchedCommandsJson[i].length}`;
         accordions[i].innerHTML = `<ul>${fetchedCommandsJson[i].map(x => `<li><a href="/commands/${x}.html" class="${x === currentPage ? "active" : ""}">${x.charAt(0).toUpperCase() + x.slice(1)}</a></li>`).join("")}</ul>`;
     }
+}
+
+function navbar() {
+    navbarTop.innerHTML += `<ul class="navbar-nav flex-fill justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://github.com/sassvagyok/sasBot" target="_blank" title="sasBot Github"><i class="fa-brands fa-github fa-2xl"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link invite" href="https://discord.com/oauth2/authorize?client_id=742556187425505312&permissions=1099816889494&integration_type=0&scope=bot+applications.commands" target="_blank" title="sasBot meghívása"><i class="fa-solid fa-plus"></i></a>
+                                </li>
+                            </ul>`;
 }
 
 function onSearch() {
@@ -58,6 +72,7 @@ function onPageLoad() {
     displayVersion();
     loadChangelog();
     offcanvas();
+    navbar();
 
     anim.forEach((el, i) => {
         setTimeout(() => {
