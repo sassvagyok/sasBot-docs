@@ -16,16 +16,14 @@ const accordionButtonMisc = document.querySelector("#button-misc");
 const accordionButtonInfo = document.querySelector("#button-info");
 
 accordionSearch.addEventListener("input", onSearch);
+const scriptBase = new URL('.', document.currentScript.src).href;
 
 async function offcanvas() {
-    const isSubPage = window.location.pathname.includes('/commands/');
-
-    const fetchCommands = await fetch(isSubPage ? "../commands.json" : "commands.json");
+    const fetchCommands = await fetch(scriptBase + "commands.json");
     if (!fetchCommands.ok) return;
 
     const fetchedCommandsJson = await fetchCommands.json();
     const currentPage = pageTitle.innerHTML.split(" ")[0].toLowerCase();
-    const prefix = isSubPage ? '' : 'commands/';
 
     const accordions = [accordionMod, accordionMusic, accordionConfig, accordionMisc, accordionInfo];
     const buttons = [accordionButtonMod, accordionButtonMusic, accordionButtonConfig, accordionButtonMisc, accordionButtonInfo];
@@ -33,7 +31,7 @@ async function offcanvas() {
 
     for (let i = 0; i < fetchedCommandsJson.length; i++) {
         buttons[i].innerHTML = `${buttonTags[i]} - ${fetchedCommandsJson[i].length}`;
-        accordions[i].innerHTML = `<ul>${fetchedCommandsJson[i].map(x => `<li><a href="${prefix}${x}.html" class="${x === currentPage ? "active" : ""}">${x.charAt(0).toUpperCase() + x.slice(1)}</a></li>`).join("")}</ul>`;
+        accordions[i].innerHTML = `<ul>${fetchedCommandsJson[i].map(x => `<li><a href="${scriptBase}commands/${x}.html" class="${x === currentPage ? "active" : ""}">${x.charAt(0).toUpperCase() + x.slice(1)}</a></li>`).join("")}</ul>`;
     }
 }
 
