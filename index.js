@@ -19,7 +19,6 @@ accordionSearch.addEventListener("input", onSearch);
 
 async function offcanvas() {
     const inCommandsDir = window.location.pathname.includes("/commands/");
-    const path = inCommandsDir ? "" : "commands/";
 
     const fetchCommands = await fetch(inCommandsDir ? "../commands.json" : "commands.json");
     if (!fetchCommands.ok) return;
@@ -31,9 +30,11 @@ async function offcanvas() {
     const buttons = [accordionButtonMod, accordionButtonMusic, accordionButtonConfig, accordionButtonMisc, accordionButtonInfo];
     const buttonTags = ["Moderáció", "Zenehallgatás", "Konfiguráció", "Sokszínű", "Információ"];
 
+    const linkPrefix = inCommandsDir ? "" : "commands/";
+
     for (let i = 0; i < fetchedCommandsJson.length; i++) {
         buttons[i].innerHTML = `${buttonTags[i]} - ${fetchedCommandsJson[i].length}`;
-        accordions[i].innerHTML = `<ul>${fetchedCommandsJson[i].map(x => `<li><a href="${path}${x}.html" class="${x === currentPage ? "active" : ""}">${x.charAt(0).toUpperCase() + x.slice(1)}</a></li>`).join("")}</ul>`;
+        accordions[i].innerHTML = `<ul>${fetchedCommandsJson[i].map(x => `<li><a href="${linkPrefix}${x}.html" class="${x === currentPage ? "active" : ""}">${x.charAt(0).toUpperCase() + x.slice(1)}</a></li>`).join("")}</ul>`;
     }
 }
 
