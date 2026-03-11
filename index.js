@@ -59,20 +59,34 @@ function onSearch() {
 
     accordionCollapses.forEach(collapse => {
         const lis = collapse.querySelectorAll("ul li");
+        const item = collapse.closest(".accordion-item");
+
+        if (!keyword) {
+            lis.forEach(li => li.style.display = "");
+            item.style.display = "";
+            if (collapse.classList.contains("show")) {
+                bootstrap.Collapse.getOrCreateInstance(collapse, { toggle: false }).hide();
+            }
+            return;
+        }
+
         let hasVisibleItems = false;
         
         lis.forEach(li => {
             const text = li.textContent.toLowerCase();
-            if (!keyword || text.includes(keyword)) {
+            if (text.includes(keyword)) {
                 li.style.display = "";
                 hasVisibleItems = true;
             } else li.style.display = "none";
         });
 
         if (hasVisibleItems) {
-            if (!collapse.classList.contains("show")) new bootstrap.Collapse(collapse, { show: true });
+            if (!collapse.classList.contains("show")) {
+                bootstrap.Collapse.getOrCreateInstance(collapse, { toggle: false }).show();
+            }
+            item.style.display = "";
         } else {
-            if (collapse.classList.contains("show")) new bootstrap.Collapse(collapse, { toggle: true });
+            item.style.display = "none";
         }
     });
 }
