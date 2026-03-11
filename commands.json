@@ -1,5 +1,5 @@
-[
-    [
+{
+    "moderation": [
         "ban",
         "bans",
         "clear",
@@ -16,7 +16,7 @@
         "warn",
         "warns"
     ],
-    [
+    "music": [
         "autoplay",
         "clearqueue",
         "filter",
@@ -36,7 +36,7 @@
         "stop",
         "volume"
     ],
-    [
+    "configuration": [
         "autoroles",
         "customcommand",
         "djrole",
@@ -50,7 +50,7 @@
         "welcome",
         "zenecsatorna"
     ],
-    [
+    "miscellaneous": [
         "8ball",
         "ascii",
         "avatár",
@@ -73,11 +73,11 @@
         "szókeresés",
         "userinfo"
     ],
-    [
+    "information": [
         "changelog",
         "feedback",
         "help",
         "info",
         "status"
     ]
-]
+}

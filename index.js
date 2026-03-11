@@ -14,35 +14,44 @@ const accordionButtonMusic = document.querySelector("#button-music");
 const accordionButtonConfig = document.querySelector("#button-config");
 const accordionButtonMisc = document.querySelector("#button-misc");
 const accordionButtonInfo = document.querySelector("#button-info");
-const navbarTop = document.querySelector(".navbar-collapse")
+const navbarTop = document.querySelector(".navbar-collapse");
 
 accordionSearch.addEventListener("input", onSearch);
 
 async function offcanvas() {
-    let fetchCommands = await fetch("/commands.json");
-
+    const fetchCommands = await fetch("/commands.json");
     const fetchedCommandsJson = await fetchCommands.json();
     const currentPage = pageTitle.innerHTML.split(" ")[0].toLowerCase();
-
     const accordions = [accordionMod, accordionMusic, accordionConfig, accordionMisc, accordionInfo];
     const buttons = [accordionButtonMod, accordionButtonMusic, accordionButtonConfig, accordionButtonMisc, accordionButtonInfo];
-    const buttonTags = ["Moderáció", "Zenehallgatás", "Konfiguráció", "Sokszínű", "Információ"];
+    const categories = {
+        miscellaneous: "Sokszínű",
+        moderation: "Moderáció",
+        information: "Információ",
+        music: "Zenelejátszás",
+        configuration: "Konfiguráció"
+    }
 
-    for (let i = 0; i < fetchedCommandsJson.length; i++) {
-        buttons[i].innerHTML = `${buttonTags[i]} - ${fetchedCommandsJson[i].length}`;
-        accordions[i].innerHTML = `<ul>${fetchedCommandsJson[i].map(x => `<li><a href="/commands/${x}.html" class="${x === currentPage ? "active" : ""}">${x.charAt(0).toUpperCase() + x.slice(1)}</a></li>`).join("")}</ul>`;
+    const keys = Object.keys(fetchedCommandsJson);
+    for (let i = 0; i < keys.length; i++) {
+        const cmds = fetchedCommandsJson[keys[i]];
+        for (let j = 0; j < cmds.length; j++) {
+            buttons[i].innerHTML = `${categories[keys[i]]} (${cmds.length})`;
+            accordions[i].innerHTML = `<ul>${cmds.map(x => `<li><a href="/commands/${x}.html" class="${x === currentPage ? "active" : ""}">${x.charAt(0).toUpperCase() + x.slice(1)}</a></li>`).join("")}</ul>`;
+        }
     }
 }
 
 function navbar() {
-    navbarTop.innerHTML += `<ul class="navbar-nav flex-fill justify-content-end">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://github.com/sassvagyok/sasBot" target="_blank" title="sasBot Github"><i class="fa-brands fa-github fa-2xl"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link invite" href="https://discord.com/oauth2/authorize?client_id=742556187425505312&permissions=1099816889494&integration_type=0&scope=bot+applications.commands" target="_blank" title="sasBot meghívása"><i class="fa-solid fa-plus"></i></a>
-                                </li>
-                            </ul>`;
+    navbarTop.innerHTML +=
+    `<ul class="navbar-nav flex-fill justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link" href="https://github.com/sassvagyok/sasBot" target="_blank" title="sasBot Github"><i class="fa-brands fa-github fa-2xl"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link invite" href="https://discord.com/oauth2/authorize?client_id=742556187425505312&permissions=1099816889494&integration_type=0&scope=bot+applications.commands" target="_blank" title="sasBot meghívása"><i class="fa-solid fa-plus"></i></a>
+        </li>
+    </ul>`;
 }
 
 function onSearch() {
@@ -68,17 +77,30 @@ function onSearch() {
     });
 }
 
+const animationObserver = new IntersectionObserver(entries => {
+    entries
+    .filter(entry => entry.isIntersecting)
+    .forEach(entry => {
+        entry.target.classList.add("visible");
+        animationObserver.unobserve(entry.target);
+    });
+});
+
+anim.forEach(elem => {
+    animationObserver.observe(elem);
+});
+
 function onPageLoad() {
     displayVersion();
     loadChangelog();
     offcanvas();
     navbar();
 
-    anim.forEach((el, i) => {
-        setTimeout(() => {
-            el.classList.add("slide-in");
-        }, 100 + i * 120);
-    });
+    // anim.forEach((el, i) => {
+    //     setTimeout(() => {
+    //         el.classList.add("slide-in");
+    //     }, 100 + i * 120);
+    // });
 }
 
 async function displayVersion() {
@@ -93,27 +115,24 @@ async function loadChangelog() {
     const fetchChangelog = await fetch("https://raw.githubusercontent.com/sassvagyok/sasBot/refs/heads/main/data/changelog.json");
     const fetchedChangelogJson = await fetchChangelog.json();
 
-    let selectedChangelog = fetchedChangelogJson.find(x => x.version === fetchedChangelogJson[fetchedChangelogJson.length - 1].version);
+    let currentChangelog = fetchedChangelogJson.find(x => x.version === fetchedChangelogJson[fetchedChangelogJson.length - 1].version);
 
-    const date = new Date(selectedChangelog.date * 1000);
+    const date = new Date(currentChangelog.date * 1000);
     const formattedDate = date.toLocaleDateString('hu-HU');
 
-    let formattedChangelog = `<h3 class="changelog">${selectedChangelog.version} | <code>${formattedDate}</code></h3>`;
-    formattedChangelog += `<p>${formatChangelog(removeDashHashLines(selectedChangelog.changelog))}</p>`;
+    let formattedChangelog = `<h3 class="changelog">${currentChangelog.version} | <code>${formattedDate}</code></h3>`;
+    formattedChangelog += `<p>${formatChangelog(currentChangelog.changelog)}</p>`;
 
     changelog.innerHTML = formattedChangelog;
 }
 
 function formatChangelog(text) {
+    text = text.replace(/^-#\s?/gm, "\n");
     if (typeof marked !== "undefined") {
         return marked.parse(text);
     }
     
     return text;
-}
-
-function removeDashHashLines(text) {
-    return text.replace(/^-#\s?/gm, "\n");
 }
 
 onPageLoad();

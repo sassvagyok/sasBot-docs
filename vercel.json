@@ -5,6 +5,11 @@
             "source": "/commands",
             "destination": "/",
             "permanent": true
+        },
+        {
+            "source": "/commands/",
+            "destination": "/",
+            "permanent": true
         }
     ]
 }
