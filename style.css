@@ -433,7 +433,7 @@ code.optional {
 
 #accordionSearch:focus {
     transition: 0.2s;
-    background-color: #141e30;
+    background-color: #1a2a43;
     border: none;
     outline: none !important;
     box-shadow: none !important;
