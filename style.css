@@ -44,7 +44,7 @@ a:hover {
 .fa-bars, .fa-bars:visited {
     transition: 0.2s;
     color:#e7e7e7;
-    font-size: 100%;
+    font-size: 100% !important;
     padding: 5px 5px !important;
 }
 
@@ -55,14 +55,14 @@ a:hover {
 
 .fa-brands, .fa-brands:visited {
     color:#888888;
-    transition: 0.2s;
+    transition: color 0.2s;
     font-size: 100%;
     padding: 5px 5px !important;
 }
 
 .fa-brands:hover {
     color:#d8d7d7;
-    transition: 0.2s;
+    transition: color 0.2s;
 }
 
 nav ul li a {
@@ -76,7 +76,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    transition: 0.2s;
+    transition: color 0.2s;
     color: #e7e7e7 !important;
 }
 
@@ -94,7 +94,7 @@ nav ul a.active {
 }
 
 nav ul li a.invite {
-    transition: 0.3s;
+    transition: color 0.3s;
     background-color: #39a1e2;
     color: #ffffff !important;
     box-shadow: 0 0 5px #1985c0;
@@ -104,7 +104,7 @@ nav ul li a.invite {
 }
 
 nav ul li a.invite:hover {
-    transition: 0.3s;
+    transition: color 0.3s;
     box-shadow: 0 0 10px #3ba8ec;
     text-shadow: 0 0 10px #d8d8d8;
 }
@@ -113,6 +113,12 @@ nav ul li a.invite:hover {
     height: 40px;
     display: inline-block;
     position: relative;
+    transition: filter 0.2s, color 0.2s;
+}
+
+.nav-item:hover .nav-icon {
+    transition: filter 0.2s, color 0.2s;
+    filter: drop-shadow(0px 0px 2px #e7e7e7) !important;
 }
 
 .navbar-nav.flex-fill {
@@ -177,7 +183,7 @@ hr {
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 25px;
-    border: 2px solid #000000;
+    border: 2px solid #09080c;
 }
 
 .moderation-showcase {
@@ -197,7 +203,7 @@ hr {
 }
 
 .changelog-showcase, .command-info, .info-showcase {
-    background-color: #121212;
+    background-color: #121115;
 }
 
 .changelog-showcase p {
@@ -250,19 +256,13 @@ h2.command {
     font-weight: 400 !important;
     font-size: 170% !important;
     margin-bottom: 0 !important;
-    color: #cad1d3 !important;
+    color: #b1b7ba !important;
 }
 
 h3.command {
     font-size: 150% !important;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
-}
-
-h3.changelog {
-    font-size: 140% !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
 }
 
 h5 {
@@ -374,7 +374,7 @@ p#version, p.footer-text {
 code {
     color: #e4e4e4 !important;
     font-size: 100% !important;
-    background-color: #222222;
+    background-color: #232226;
     padding: 3px;
     border-radius: 5px;
 }

@@ -109,12 +109,6 @@ function onPageLoad() {
     loadChangelog();
     offcanvas();
     navbar();
-
-    // anim.forEach((el, i) => {
-    //     setTimeout(() => {
-    //         el.classList.add("slide-in");
-    //     }, 100 + i * 120);
-    // });
 }
 
 async function displayVersion() {
@@ -134,7 +128,7 @@ async function loadChangelog() {
     const date = new Date(currentChangelog.date * 1000);
     const formattedDate = date.toLocaleDateString('hu-HU');
 
-    let formattedChangelog = `<h3 class="changelog">${currentChangelog.version} | <code>${formattedDate}</code></h3>`;
+    let formattedChangelog = `<h3>${currentChangelog.version} | <code>${formattedDate}</code></h3>`;
     formattedChangelog += `<p>${formatChangelog(currentChangelog.changelog)}</p>`;
 
     changelog.innerHTML = formattedChangelog;
