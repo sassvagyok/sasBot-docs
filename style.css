@@ -94,7 +94,7 @@ nav ul a.active {
 }
 
 nav ul li a.invite {
-    transition: color 0.3s;
+    transition: 0.3s;
     background-color: #39a1e2;
     color: #ffffff !important;
     box-shadow: 0 0 5px #1985c0;
@@ -104,7 +104,7 @@ nav ul li a.invite {
 }
 
 nav ul li a.invite:hover {
-    transition: color 0.3s;
+    transition: 0.3s;
     box-shadow: 0 0 10px #3ba8ec;
     text-shadow: 0 0 10px #d8d8d8;
 }
@@ -113,11 +113,11 @@ nav ul li a.invite:hover {
     height: 40px;
     display: inline-block;
     position: relative;
-    transition: filter 0.2s, color 0.2s;
+    transition: 0.2s;
 }
 
 .nav-item:hover .nav-icon {
-    transition: filter 0.2s, color 0.2s;
+    transition: filter 0.2s;
     filter: drop-shadow(0px 0px 2px #e7e7e7) !important;
 }
 
