@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&display=swap");
 
+:root {
+    --accent-color: #070c14;
+    --font-color: #e9f3f7;
+    --link-color: #e7e7e7;
+    --accordion-color: #101827;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,7 +18,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Alexandria', sans-serif !important;
-    color: #e6eff3 !important;
+    color: var(--font-color) !important;
 }
 
 .container-fluid {
@@ -31,7 +38,7 @@ a:hover {
 }
 
 .navbar {
-    background-color: #070c14 !important;
+    background-color: var(--accent-color) !important;
 }
 
 .navbar-toggler:focus,
@@ -43,7 +50,7 @@ a:hover {
 
 .fa-bars, .fa-bars:visited {
     transition: 0.2s;
-    color:#e7e7e7;
+    color: var(--link-color);
     font-size: 100% !important;
     padding: 5px 5px !important;
 }
@@ -54,14 +61,14 @@ a:hover {
 }
 
 .fa-brands, .fa-brands:visited {
-    color:#888888;
+    color: #888888;
     transition: color 0.2s;
     font-size: 100%;
     padding: 5px 5px !important;
 }
 
 .fa-brands:hover {
-    color:#d8d7d7;
+    color: var(--link-color);
     transition: color 0.2s;
 }
 
@@ -77,19 +84,19 @@ nav ul li a {
 
 nav ul li a:hover {
     transition: color 0.2s;
-    color: #e7e7e7 !important;
+    color: var(--link-color) !important;
 }
 
 nav ul li a:link {
-    color: #e7e7e7;
+    color: var(--link-color);
 }
 
 nav ul li a:visited {
-    color: #e7e7e7;
+    color: var(--link-color);
 }
 
 nav ul a.active {
-    color: #e7e7e7 !important;
+    color: var(--link-color) !important;
     font-weight: 600 !important;
 }
 
@@ -118,7 +125,7 @@ nav ul li a.invite:hover {
 
 .nav-item:hover .nav-icon {
     transition: filter 0.2s;
-    filter: drop-shadow(0px 0px 2px #e7e7e7) !important;
+    filter: drop-shadow(0px 0px 2px var(--link-color)) !important;
 }
 
 .navbar-nav.flex-fill {
@@ -219,7 +226,7 @@ h1 {
     font-family: 'Alexandria', sans-serif;
     font-weight: 600 !important;
     font-size: 310% !important;
-    color: #e6eff3 !important;
+    color: var(--font-color) !important;
     text-align: center;
     margin-top: 100px !important;
     word-wrap: break-word;
@@ -239,7 +246,7 @@ h3 {
     font-size: 110% !important;
     padding-top: 0px;
     padding-bottom: 15px;
-    color: #e6eff3 !important;
+    color: var(--font-color) !important;
     text-align: center;
 }
 
@@ -248,7 +255,7 @@ h2, .command-info h3 {
     font-weight: 500;
     font-size: 200% !important;
     margin-bottom: 0px !important;
-    color: #e6eff3 !important;
+    color: var(--font-color) !important;
     text-align: center;
 }
 
@@ -269,7 +276,7 @@ h5 {
     font-family: 'Alexandria', sans-serif;
     font-weight: 500 !important;
     font-size: 170% !important;
-    color: #e6eff3 !important;
+    color: var(--font-color) !important;
 }
 
 .changelog-showcase hr {
@@ -296,7 +303,7 @@ h5 {
 }
 
 .command-showcase {
-    color: #ffffff !important;
+    color: var(--font-color) !important;
     font-size: 100% !important;
     padding-left: 40px;
     padding-right: 40px;
@@ -319,7 +326,7 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 60px;
-    background-color: #070c14;
+    background-color: var(--accent-color);
 }
 
 footer .text-center {
@@ -338,7 +345,7 @@ p {
     font-family: 'Alexandria', sans-serif;
     font-weight: 300 !important;
     text-align: center;
-    color: #e6eff3;
+    color: var(--font-color);
     margin-bottom: 0 !important;
 }
 
@@ -389,15 +396,15 @@ code.optional {
 }
 
 .accordion-button.collapsed::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e6eff3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e6eff3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e6eff3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e6eff3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
 }
 
 .offcanvas {
-    background-color: #070c14 !important;
+    background-color: var(--accent-color) !important;
 }
 
 .offcanvas-header {
@@ -411,11 +418,11 @@ code.optional {
 
 #accordionSearch {
     font-family: 'Alexandria', sans-serif;
-    background-color: #152033;
-    border: none;
+    background-color: var(--accent-color) !important;
+    border: 2px solid var(--accordion-color) !important;
     font-size: 105%;
     font-weight: 300;
-    color: #e6eff3 !important;
+    color: var(--font-color) !important;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -431,10 +438,10 @@ code.optional {
     color: #b0b0b0;
 }
 
-#accordionSearch:focus {
+#accordionSearch:focus, #accordionSearch:hover {
     transition: 0.2s;
-    background-color: #1a2a43;
-    border: none;
+    background-color: #172237 !important;
+    border: 2px solid #172237 !important;
     outline: none !important;
     box-shadow: none !important;
 }
@@ -451,7 +458,7 @@ code.optional {
 .accordion-button {
     background-color: transparent !important;
     box-shadow: none !important;
-    color: #e6eff3 !important;
+    color: var(--font-color) !important;
     font-size: 60% !important;
 }
 
@@ -466,7 +473,7 @@ code.optional {
 }
 
 .offcanvas .accordion-item {
-    border: 2px solid #141e30 !important;
+    background-color: var(--accordion-color) !important;
     border-radius: 10px !important;
     margin-bottom: 10px !important;
 }
@@ -493,23 +500,23 @@ code.optional {
 
 .offcanvas .accordion-body li a:hover {
     transition: 0.2s;
-    color: #e7e7e7 !important;
+    color: var(--link-color) !important;
     text-decoration: none;
 }
 
 .offcanvas .accordion-body li a:link {
-    color: #e7e7e7;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 .offcanvas .accordion-body li a:visited {
-    color: #e7e7e7;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 .offcanvas .accordion-body li a.active {
     font-weight: 400 !important;
-    color: #e7e7e7 !important;
+    color: var(--link-color) !important;
 }
 
 .offcanvas .accordion-body li::marker {
