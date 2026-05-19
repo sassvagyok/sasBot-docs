@@ -105,20 +105,39 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
-                    <h3 class="command">Paraméterek</h3>
+                    <h3 class="command">Alparancsok</h3>
                     <hr>
                     <ul>
-                        <li>
-                            <p class="param"><code>tag (felhasználó)</code>: Tag, akit ki akarsz tiltani | <b>Kötelező</b></p>
+                        <li class="subcommand">
+                            <p class="param"><b>Ideiglenes</b>: Tag kitiltása megadott időre</p>
+                            <ul>
+                                <li>
+                                    <p class="param"><code>tag (felhasználó)</code>: Tag, akit ki akarsz tiltani | <b>Kötelező</b></p>
+                                </li>
+                                <li>
+                                    <p class="param"><code>időtartam (szöveg)</code>: itiltás időtartama (m/h/d) | <b>Kötelező</b></p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">indok (szöveg)</code>: Kitiltás indoka (üres: nincs indok)</p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">törlés (szám)</code>: A tag üzeneteinek törlése ennyi órával visszamenőleg (üres: nincs törlés)</p>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <p class="param"><code class="optional">indok (szöveg)</code>: Kitiltás időtartama (m/h/d) (üres: nincs lejárat)</p>
-                        </li>
-                        <li>
-                            <p class="param"><code class="optional">időtartam (szöveg)</code>: Kitiltás indoka (üres: nincs indok)</p>
-                        </li>
-                        <li>
-                            <p class="param"><code class="optional">törlés (szám)</code>: A tag üzeneteinek törlése ennyi órával visszamenőleg (üres: nincs törlés)</p>
+                        <li class="subcommand">
+                            <p class="param"><b>Végleges</b>: Tag kitiltása lejárat nélkül</p>
+                            <ul>
+                                <li>
+                                    <p class="param"><code>tag (felhasználó)</code>: Tag, akit ki akarsz tiltani | <b>Kötelező</b></p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">indok (szöveg)</code>: Kitiltás indoka (üres: nincs indok)</p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">törlés (szám)</code>: A tag üzeneteinek törlése ennyi órával visszamenőleg (üres: nincs törlés)</p>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
