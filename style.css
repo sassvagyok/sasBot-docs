@@ -591,3 +591,7 @@ code.optional {
         font-size: 90% !important;
     }
 }
+
+@view-transition {
+    navigation: auto;
+}
