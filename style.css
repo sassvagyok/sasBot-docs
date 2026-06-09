@@ -105,15 +105,20 @@ nav ul li a.invite {
     background-color: #39a1e2;
     color: #ffffff !important;
     box-shadow: 0 0 5px #1985c0;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    border-radius: 10px;
+    text-align: center;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-radius: 13px;
 }
 
 nav ul li a.invite:hover {
     transition: 0.3s;
     box-shadow: 0 0 10px #3ba8ec;
     text-shadow: 0 0 10px #d8d8d8;
+}
+
+.plus-outline {
+    text-shadow: 0 0 5px #156a98, 0 0 5px #156a98;
 }
 
 .nav-icon {
