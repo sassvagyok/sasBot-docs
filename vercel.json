@@ -10,6 +10,16 @@
             "source": "/commands/",
             "destination": "/",
             "permanent": true
+        },
+        {
+            "source": "/media",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/media/",
+            "destination": "/",
+            "permanent": true
         }
     ]
 }

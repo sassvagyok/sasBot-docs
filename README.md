@@ -1,7 +1,6 @@
-# Egyszerű [dokumentáció](https://sasbot.mattexyz.com) a sasBot Discord bothoz.
+# Egyszerű weboldal/dokumentáció a [sasBot](https://github.com/sassvagyok/sasBot) Discord bothoz
 
-## Tervezett funkciók
-- Opció visszajelzés küldésére
-- Opció a Sötét/Világos mód állítására
-
-Discord: `mattexyz`
+## Funkciók
+- Landing page a fontosabb funkciókról és legutóbbi változásokról
+- Minden elérhető parancs leírása, alparancsai, paraméterei, szükséges jogosultságai és elérhetőségei
+- Keresés a parancsok között
