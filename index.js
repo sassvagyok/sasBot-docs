@@ -49,7 +49,7 @@ function navbar() {
             <a class="nav-link" href="https://github.com/sassvagyok/sasBot" target="_blank" title="sasBot Github"><i class="fa-brands fa-github fa-xl"></i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link invite" href="https://discord.com/oauth2/authorize?client_id=742556187425505312&permissions=1099816889494&integration_type=0&scope=bot+applications.commands" target="_blank" title="sasBot meghívása"><i class="fa-solid fa-plus fa-xl plus-outline"></i></a>
+            <a class="nav-link" href="https://discord.com/oauth2/authorize?client_id=742556187425505312&permissions=1099816889494&integration_type=0&scope=bot+applications.commands" target="_blank" title="sasBot meghívása"><i class="fa-solid fa-plus fa-2xl"></i></a>
         </li>
     </ul>`;
 }
