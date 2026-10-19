@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../media/icon_transparent.png">
-    <title>Permissions - sasBot</title>
+    <title>Welcomemessage - sasBot</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3b3f778d59.js" crossorigin="anonymous"></script>
 </head>
@@ -92,7 +92,7 @@
         <main id="content">
             <div class="row justify-content-center">
                 <div class="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5 mb-5 anim">
-                    <h1 class="command">Permissions</h1>
+                    <h1 class="command">Welcomemessage</h1>
                     <h2 class="command">Konfiguráció</h2>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                 <div class="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-5 mb-4 pt-3 pb-4 tabcontent command-info anim">
                     <h3 class="command">Leírás</h3>
                     <hr>
-                    <p>Parancsok egyedi ranghoz való kötése az alapértelmezett jogosultság helyett (max. 5 rang) (kivéve Konfigurációs és Információs parancsok)</p>
+                    <p>Egyedi üdvözlő üzenet beállítása, törlése vagy megtekintése, ami a tagok csatlakozásakor a megadott csatornában lesz megjelenítve</p>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -109,26 +109,50 @@
                     <hr>
                     <ul>
                         <li class="subcommand">
-                            <p class="param"><b>Módosítás</b>: Parancs használatának ranghoz kötése, vagy beállított rang kivétele</p>
+                            <p class="param"><b>Beállítás</b>: Üdvözlő üzenet beállítása</p>
                             <ul>
                                 <li>
-                                    <p class="param"><code>parancs (szöveg)</code>: Parancs neve | <b>Kötelező</b></p>
+                                    <p class="param"><code>csatorna (csatorna)</code>: Üdvözlő üzenet csatornája | <b>Kötelező</b></p>
                                 </li>
                                 <li>
-                                    <p class="param"><code>rang (rang)</code>: Rang, ami szükséges legyen a parancs használatához, vagy hozzáadott kivétele | <b>Kötelező</b></p>
+                                    <p class="param"><code>leírás (szöveg)</code>: Üdvözlő üzenet leírása (Tag nevének kiírása: [tag]) | <b>Kötelező</b></p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">cím (szöveg)</code>: Üdvözlő üzenet címe (Tag nevének kiírása: [tag]) (üres: nincs)</p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">fejléc (szöveg)</code>: Üdvözlő üzenet fejléce (Tag nevének kiírása: [tag]) (üres: "[tag] belépett!")</p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">kép (szöveg)</code>: Üdvözlő üzenet képének linkje (üres: tag profilképe)</p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">szín (szöveg)</code>: Üdvözlő üzenet színe hex formátumban (pl. #ffffff) (üres: zöld)</p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">ikon (logikai)</code>: Megjelenjen a fejléc mellett a tag profilképe? (üres: igaz)</p>
+                                </li>
+                                <li>
+                                    <p class="param"><code class="optional">timestamp (logikai)</code>: Megjelenjen a belépés ideje? (üres: igaz)</p>
                                 </li>
                             </ul>
                         </li>
                         <li class="subcommand">
-                            <p class="param"><b>Módosított</b>: Ranghoz kötött parancsok megjelenítése</p>
+                            <p class="param"><b>Beállított</b>: Beállított üdvözlő üzenet és csatorna megjelenítése</p>
                         </li>
                         <li class="subcommand">
-                            <p class="param"><b>Törlés</b>: Ranghoz kötött parancs visszaállítása alaphelyzetbe</p>
+                            <p class="param"><b>Bekapcsolás</b>: Beállított üdvözlő üzenet küldésének be-/kikapcsolása törlés nélkül</p>
                             <ul>
                                 <li>
-                                    <p class="param"><code>parancs (szöveg)</code>: Parancs neve | <b>Kötelező</b></p>
+                                    <p class="param"><code>állapot (logikai)</code>: Be legyen kapcsolva az üdvözlő üzenet küldése? | <b>Kötelező</b></p>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="subcommand">
+                            <p class="param"><b>Súgó</b>: Segítség a paraméterek jelentéséhez</p>
+                        </li>
+                        <li class="subcommand">
+                            <p class="param"><b>Törlés</b>: Üdvözlő üzenet törlése</p>
                         </li>
                     </ul>
                 </div>
